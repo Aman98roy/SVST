@@ -1,12 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+type CardProps = Omit<HTMLMotionProps<"div">, "onAnimationStart" | "onAnimationEnd" | "onDrag" | "onDragStart" | "onDragEnd"> & {
   hover?: boolean;
-}
+};
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, hover = true, children, ...props }, ref) => {

@@ -74,7 +74,7 @@ export function HeroSlider() {
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, heroImages.length]);
+  }, [isAutoPlaying]);
 
   const goToSlide = useCallback((index: number) => {
     const newDirection = index > currentIndex ? 1 : -1;
@@ -85,12 +85,12 @@ export function HeroSlider() {
   const goToPrevious = useCallback(() => {
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
-  }, [heroImages.length]);
+  }, []);
 
   const goToNext = useCallback(() => {
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % heroImages.length);
-  }, [heroImages.length]);
+  }, []);
 
   const paginate = useCallback((newDirection: number) => {
     if (newDirection === 1) {
