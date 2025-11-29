@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+  /* Light mode - not used but defined for consistency */
+  --dark-bg: #ffffff;
+  --dark-bg-secondary: #ffffff;
+  --dark-bg-tertiary: #f9fafb;
+  --dark-glass: rgba(255, 255, 255, 0.1);
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 18, 18, 18;
+  --background-end-rgb: 23, 23, 23;
+  /* Dark mode colors - globally used */
+  --dark-bg: #111827; /* gray-900 */
+  --dark-bg-secondary: #030712; /* gray-950 */
+  --dark-bg-tertiary: #1f2937; /* gray-800 */
+  --dark-glass: rgba(30, 30, 30, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Skip to main content link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1FAA59;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: var(--dark-glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Global dark mode background utilities - use these classes instead of hardcoding colors */
+@layer utilities {
+  .bg-dark {
+    background-color: var(--dark-bg);
+  }
+  
+  .bg-dark-secondary {
+    background-color: var(--dark-bg-secondary);
+  }
+  
+  .bg-dark-tertiary {
+    background-color: var(--dark-bg-tertiary);
+  }
+  
+  /* For use with dark: variant */
+  .dark\:bg-dark {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--dark-bg);
+    }
+  }
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #1FAA59;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1FAA59;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
+
+/* Prevent image blur */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: auto;
+}
+
+/* Force hardware acceleration for images */
+.hero-slider img {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
