@@ -50,20 +50,17 @@ export function Header() {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="sticky top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-soft transition-all duration-300"
+      className="sticky top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-soft transition-all duration-300"
+      style={{ minHeight: '80px' }}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center group flex-shrink-0">
+          <Link href="/" className="flex items-center group flex-shrink-0 z-10">
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0">
               <Image
                 src="/images/svst-logo.png"
@@ -78,8 +75,6 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1 flex-1 justify-center">
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.submenu ? (
@@ -98,7 +93,7 @@ export function Header() {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
-                          className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-900 dark:border dark:border-gray-800 rounded-2xl shadow-soft-lg p-2"
+                          className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-900 dark:border dark:border-gray-800 rounded-2xl shadow-soft-lg p-2 z-50"
                         >
                           {item.submenu.map((subItem) => (
                             <Link
@@ -126,13 +121,13 @@ export function Header() {
           </div>
 
           {/* Theme Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4 z-10">
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                    className="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-gray-800 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-gray-700 hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex-shrink-0"
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? (
+              {mounted && theme === "dark" ? (
                 <Sun className="w-5 h-5" />
               ) : (
                 <Moon className="w-5 h-5" />
@@ -141,7 +136,7 @@ export function Header() {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300"
+              className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-gray-700 hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex-shrink-0"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -150,7 +145,6 @@ export function Header() {
                 <Menu className="w-5 h-5" />
               )}
             </button>
-            </div>
           </div>
         </div>
       </nav>
@@ -162,7 +156,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800"
+            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 z-40 relative"
           >
             <div className="container mx-auto px-4 py-4 space-y-2">
               {navItems.map((item) => (
