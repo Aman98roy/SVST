@@ -8,12 +8,12 @@ import { HeroSlider } from "./hero-slider";
 
 export function Hero() {
   return (
-    <section className="relative flex overflow-hidden pt-20 pb-8">
+    <section className="relative flex overflow-hidden pt-2 pb-8 bg-white dark:bg-gray-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 min-h-[50vh] lg:min-h-[60vh]">
           {/* Part 1: Text Section - Left Side (2/5 width) */}
-          <div className="lg:col-span-2 flex items-center justify-center lg:justify-start py-12 lg:py-0 relative z-20 bg-white dark:bg-gray-900 lg:bg-transparent">
-            <div className="w-full max-w-2xl px-6 lg:px-8 text-center lg:text-left space-y-6">
+          <div className="lg:col-span-2 flex items-center justify-center lg:justify-start py-6 lg:py-4 relative z-20 bg-white dark:bg-gray-950 lg:bg-transparent">
+            <div className="w-full max-w-2xl px-6 lg:px-8 text-center lg:text-left space-y-4">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -23,9 +23,9 @@ export function Hero() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2, duration: 0.5 }}
-                  className="inline-flex items-center space-x-2 px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium"
+                  className="inline-flex items-center space-x-2 px-3 py-1.5 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-xs sm:text-sm font-medium"
                 >
-                  <Heart className="w-4 h-4" />
+                  <Heart className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span>Empowering Communities Since 2010</span>
                 </motion.span>
               </motion.div>
@@ -82,7 +82,7 @@ export function Hero() {
           </div>
 
           {/* Modern Image Slider - Right Side (3/5 width) */}
-          <div className="lg:col-span-3 relative min-h-[350px] lg:min-h-[50vh]">
+          <div className="lg:col-span-3 relative min-h-[350px] lg:min-h-[50vh] py-6 lg:py-4">
             <HeroSlider />
           </div>
         </div>

@@ -158,14 +158,14 @@ export function Services() {
                   </div>
 
                   {/* Content Section */}
-                  <div className="p-6 lg:p-8 relative z-10 flex flex-col h-full min-h-[280px]">
+                  <div className="p-6 lg:p-8 relative z-10 flex flex-col h-full">
                     {/* Title */}
                     <motion.h3
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 + 0.4 }}
-                      className="font-heading font-bold text-xl sm:text-2xl text-gray-900 dark:text-white mb-4 leading-tight tracking-tight line-clamp-2"
+                      className="font-heading font-bold text-xl sm:text-2xl text-gray-900 dark:text-white mb-3 leading-tight tracking-tight line-clamp-2 min-h-[3.5rem]"
                     >
                       {service.title}
                     </motion.h3>
@@ -176,7 +176,7 @@ export function Services() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 + 0.5 }}
-                      className="text-gray-600 dark:text-gray-300 mb-6 flex-1 text-base sm:text-lg leading-relaxed font-normal line-clamp-3"
+                      className="text-gray-600 dark:text-gray-300 mb-0 flex-1 text-base sm:text-lg leading-relaxed font-normal line-clamp-4"
                     >
                       {service.description}
                     </motion.p>
@@ -187,7 +187,7 @@ export function Services() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 + 0.6 }}
-                      className="mt-auto"
+                      className="mt-0"
                     >
                       <Button 
                         variant="outline" 
