@@ -215,29 +215,6 @@ export function EventPageContent({
           </motion.div>
         )}
 
-        {/* Full Venue Address Section (if provided) */}
-        {fullVenueAddress && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto mb-20"
-          >
-            <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 backdrop-blur-sm rounded-3xl p-8 lg:p-10 shadow-xl border-2 border-gray-200/50 dark:border-gray-700/50">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className={`w-12 h-12 ${venueColorClasses[venueIconColor as keyof typeof venueColorClasses] || venueColorClasses.green} rounded-xl flex items-center justify-center border`}>
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <h3 className="font-heading font-bold text-2xl text-gray-900 dark:text-white">Full Venue Address</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">
-                {fullVenueAddress}
-              </p>
-            </div>
-          </motion.div>
-        )}
-
         {/* Event Highlights - Banner Style Left/Right */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
