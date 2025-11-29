@@ -153,7 +153,15 @@ export function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-sm text-gray-400">
             © {new Date().getFullYear()} Swami Vivekanand Seva Trust | Designed
-            & Developed By Bigpage
+            & Developed By{" "}
+            <a
+              href="https://altheabit.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-400 hover:text-primary-300 transition-colors font-medium"
+            >
+              Altheabit
+            </a>
           </p>
         </div>
       </div>

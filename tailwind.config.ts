@@ -65,6 +65,10 @@ const config: Config = {
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
+      lineClamp: {
+        2: "2",
+        3: "3",
+      },
     },
   },
   plugins: [],
