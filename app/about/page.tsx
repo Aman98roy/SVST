@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       <History />
       <FounderMessage />
       <Team />

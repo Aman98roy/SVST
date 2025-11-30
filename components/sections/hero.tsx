@@ -200,7 +200,7 @@ export function Hero() {
   return (
     <section className="relative flex overflow-hidden pt-2 pb-8 bg-white dark:bg-gray-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 min-h-[40vh] lg:min-h-[45vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 min-h-[60vh] lg:min-h-[70vh]">
           {/* Part 1: Text Section - Left Side (3/5 width) */}
           <div className="lg:col-span-3 flex items-center justify-center lg:justify-start py-4 lg:py-2 relative z-20 bg-white dark:bg-gray-950 lg:bg-transparent">
             <div className="w-full max-w-3xl px-6 lg:px-8 text-center lg:text-left space-y-3">
@@ -268,7 +268,7 @@ export function Hero() {
           </div>
 
           {/* Modern Image Slider - Right Side (2/5 width) */}
-          <div className="lg:col-span-2 relative min-h-[300px] lg:min-h-[45vh] py-4 lg:py-2">
+          <div className="lg:col-span-2 relative min-h-[350px] lg:min-h-[60vh] py-4 lg:py-2">
             <HeroSlider />
           </div>
         </div>

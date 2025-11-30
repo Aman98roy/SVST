@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function DonatePage() {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       <ImpactMeter />
       <DonationForm />
     </div>

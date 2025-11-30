@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function DDUGKYPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       <DDUGKYInfo />
     </div>
   );

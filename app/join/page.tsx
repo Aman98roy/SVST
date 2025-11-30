@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function JoinPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       <JoinUsSection />
     </div>
   );

@@ -71,7 +71,7 @@ export function EventPageContent({
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 lg:pt-6 lg:pb-10 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Left: Title Section */}
             <motion.div
@@ -157,7 +157,7 @@ export function EventPageContent({
         </div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         {/* Introduction Section with Modern Design */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

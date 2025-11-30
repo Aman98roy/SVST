@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function RepublicDayPage() {
   return (
-    <div className="pt-20">
+    <div>
       <RepublicDayContent />
     </div>
   );

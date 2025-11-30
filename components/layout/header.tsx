@@ -84,7 +84,9 @@ export function Header() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="sticky top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-soft transition-all duration-300"
+      className={`sticky top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-soft transition-all duration-300 ${
+        mobileMenuOpen ? 'lg:z-50' : ''
+      }`}
       style={{ minHeight: '80px' }}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,7 +153,7 @@ export function Header() {
           </div>
 
           {/* Theme Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-2 sm:space-x-4 z-10">
+          <div className="flex items-center space-x-2 sm:space-x-4 z-[60] relative">
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-gray-700 hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex-shrink-0"
@@ -166,7 +168,7 @@ export function Header() {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-gray-700 hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex-shrink-0"
+              className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-gray-700 hover:text-primary-500 dark:hover:text-primary-400 transition-colors flex-shrink-0 relative z-[60]"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -183,20 +185,28 @@ export function Header() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
-            {/* Backdrop */}
+            {/* Backdrop - Dark overlay to hide background content */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 lg:hidden"
+              className="fixed inset-0 bg-black/95 backdrop-blur-lg z-[45] lg:hidden"
+              style={{ 
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                width: '100%',
+                height: '100%'
+              }}
             />
             {/* Menu Content */}
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 z-40 relative max-h-[calc(100vh-80px)] overflow-y-auto"
+              className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 z-50 relative max-h-[calc(100vh-80px)] overflow-y-auto"
             >
               <div className="container mx-auto px-4 py-4 space-y-2">
               {navItems.map((item) => (

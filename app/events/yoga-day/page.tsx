@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function YogaDayPage() {
   return (
-    <div className="pt-20">
+    <div>
       <YogaDayContent />
     </div>
   );

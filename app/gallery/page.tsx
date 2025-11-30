@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       <GalleryGrid />
     </div>
   );
