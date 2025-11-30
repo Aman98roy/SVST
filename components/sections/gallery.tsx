@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { ImageModal } from "@/components/ui/image-modal";
 
 // Placeholder images - replace with actual gallery images
 const galleryImages = Array.from({ length: 9 }, (_, i) => ({
@@ -14,6 +16,23 @@ const galleryImages = Array.from({ length: 9 }, (_, i) => ({
 }));
 
 export function Gallery() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState(0);
+  const imageSources = galleryImages.map(img => img.src);
+
+  const openModal = (index: number) => {
+    setModalIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleModalNavigate = (index: number) => {
+    setModalIndex(index);
+  };
+
   return (
     <section className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,6 +61,7 @@ export function Gallery() {
               transition={{ delay: index * 0.05, duration: 0.5 }}
               whileHover={{ scale: 1.05 }}
               className="relative overflow-hidden rounded-2xl aspect-[4/3] group cursor-pointer"
+              onClick={() => openModal(index)}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
               <Image
@@ -70,6 +90,16 @@ export function Gallery() {
           </Button>
         </motion.div>
       </div>
+
+      {/* Full Screen Modal */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        images={imageSources}
+        currentIndex={modalIndex}
+        onNavigate={handleModalNavigate}
+        showNavigation={true}
+      />
     </section>
   );
 }

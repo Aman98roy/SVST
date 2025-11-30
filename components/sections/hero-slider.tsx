@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
-import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play, Pause, Maximize2 } from "lucide-react";
+import { ImageModal } from "@/components/ui/image-modal";
 
 // Hero images array - update this to match images in public/images/hero/
 // Images are served from public/images/hero/ folder
@@ -46,6 +47,8 @@ export function HeroSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState<boolean[]>(
     new Array(heroImages.length).fill(false)
   );
@@ -100,6 +103,20 @@ export function HeroSlider() {
     }
   }, [goToNext, goToPrevious]);
 
+  const openModal = useCallback(() => {
+    setModalIndex(currentIndex);
+    setIsModalOpen(true);
+  }, [currentIndex]);
+
+  const closeModal = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
+
+  const handleModalNavigate = useCallback((index: number) => {
+    setModalIndex(index);
+    setCurrentIndex(index);
+  }, []);
+
   return (
     <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-soft-lg hero-slider group">
       {/* Gradient Overlay */}
@@ -131,7 +148,8 @@ export function HeroSlider() {
                 goToPrevious();
               }
             }}
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 w-full h-full cursor-pointer"
+            onClick={openModal}
           >
             <motion.img
               src={heroImages[currentIndex]}
@@ -227,6 +245,30 @@ export function HeroSlider() {
       >
         {currentIndex + 1} / {heroImages.length}
       </motion.div>
+
+      {/* Full Screen Button */}
+      <motion.button
+        onClick={(e) => {
+          e.stopPropagation();
+          openModal();
+        }}
+        className="absolute bottom-6 right-4 z-20 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
+        aria-label="View full screen"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <Maximize2 className="w-5 h-5 text-white" />
+      </motion.button>
+
+      {/* Full Screen Modal */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        images={heroImages}
+        currentIndex={modalIndex}
+        onNavigate={handleModalNavigate}
+        showNavigation={true}
+      />
     </div>
   );
 }

@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Target, Eye, Lightbulb, Heart } from "lucide-react";
+import { ImageModal } from "@/components/ui/image-modal";
 
 const values = [
   {
@@ -44,6 +46,23 @@ const values = [
 ];
 
 export function Mission() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState(0);
+  const imageSources = values.map(v => v.image);
+
+  const openModal = (index: number) => {
+    setModalIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleModalNavigate = (index: number) => {
+    setModalIndex(index);
+  };
+
   return (
     <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,7 +108,10 @@ export function Mission() {
                   <div className={`absolute inset-0 bg-gradient-to-br ${value.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                   
                   {/* Image Section - Split Layout */}
-                  <div className="relative h-64 w-full overflow-hidden">
+                  <div 
+                    className="relative h-64 w-full overflow-hidden cursor-pointer"
+                    onClick={() => openModal(index)}
+                  >
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -156,6 +178,16 @@ export function Mission() {
           })}
         </div>
       </div>
+
+      {/* Full Screen Modal */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        images={imageSources}
+        currentIndex={modalIndex}
+        onNavigate={handleModalNavigate}
+        showNavigation={true}
+      />
     </section>
   );
 }
