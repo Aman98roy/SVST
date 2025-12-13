@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { EventPageContent } from "@/components/sections/event-page-content";
-import { Users, Award, Heart, Music } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Employment Fairs | Swami Vivekanand Seva Trust",
@@ -21,28 +20,28 @@ export default function EmploymentFairsPage() {
       description="Comprehensive employment fairs connecting rural youth with job opportunities, providing career guidance, skill assessment, and direct recruitment by various companies and organizations."
       eventHighlights={[
         {
-          icon: Users,
+          icon: "Users",
           title: "Direct Recruitment",
           description: "On-spot job offers from participating companies with immediate employment opportunities for qualified candidates.",
           color: "blue",
           iconColor: "blue"
         },
         {
-          icon: Award,
+          icon: "Award",
           title: "Skill Assessment",
           description: "Professional evaluation of candidate skills with certification and recommendations for career development.",
           color: "green",
           iconColor: "green"
         },
         {
-          icon: Heart,
+          icon: "Heart",
           title: "Career Guidance",
           description: "Expert counseling sessions helping youth identify suitable career paths and development opportunities.",
           color: "orange",
           iconColor: "orange"
         },
         {
-          icon: Music,
+          icon: "Music",
           title: "Industry Partnerships",
           description: "Strong network of employers from various sectors offering diverse employment opportunities to rural youth.",
           color: "purple",

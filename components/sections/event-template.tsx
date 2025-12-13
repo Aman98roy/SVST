@@ -18,11 +18,51 @@ import {
   Heart,
   Star,
   CheckCircle,
-  Expand
+  Expand,
+  Flag,
+  Mic,
+  Music,
+  BookOpen,
+  Globe,
+  Lightbulb,
+  Smile,
+  Target,
+  TreePine,
+  Trophy,
+  Sparkles,
+  Activity
 } from "lucide-react";
 
+// Icon mapping for string-based icon system
+const iconMap: { [key: string]: any } = {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Calendar,
+  Users,
+  MapPin,
+  Clock,
+  Award,
+  Heart,
+  Star,
+  CheckCircle,
+  Expand,
+  Flag,
+  Mic,
+  Music,
+  BookOpen,
+  Globe,
+  Lightbulb,
+  Smile,
+  Target,
+  TreePine,
+  Trophy,
+  Sparkles,
+  Activity
+};
+
 interface EventFeature {
-  icon: any;
+  icon: string;
   title: string;
   description: string;
 }
@@ -30,7 +70,7 @@ interface EventFeature {
 interface EventStat {
   label: string;
   value: string;
-  icon: any;
+  icon: string;
 }
 
 interface EventGalleryItem {
@@ -212,7 +252,7 @@ export function EventTemplate({
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {stats.map((stat, index) => {
-              const Icon = stat.icon;
+              const Icon = iconMap[stat.icon] || iconMap.Target;
               return (
                 <motion.div
                   key={stat.label}
@@ -337,7 +377,7 @@ export function EventTemplate({
                   </h3>
                   <div className="space-y-2">
                     {features.slice(0, 4).map((feature, index) => {
-                      const Icon = feature.icon;
+                      const Icon = iconMap[feature.icon] || iconMap.Target;
                       return (
                         <motion.div
                           key={feature.title}

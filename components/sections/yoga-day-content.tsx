@@ -1,46 +1,45 @@
 "use client";
 
 import { EventPageContent } from "./event-page-content";
-import { Users, Sparkles, BookOpen, Leaf, Heart } from "lucide-react";
 
 const yogaEventHighlights = [
   {
-    icon: Users,
+    icon: "Users",
     title: "Mass Yoga Session",
     description: "Led by experienced yoga instructors",
     color: "from-blue-500/20 to-cyan-500/20",
     iconColor: "text-blue-500",
   },
   {
-    icon: BookOpen,
+    icon: "BookOpen",
     title: "Awareness Speech",
     description: "On the importance of Yoga in daily life, focusing on mental and physical well-being",
     color: "from-green-500/20 to-emerald-500/20",
     iconColor: "text-green-500",
   },
   {
-    icon: Sparkles,
+    icon: "Sparkles",
     title: "Demonstration of Asanas",
     description: "Covering key yoga techniques suitable for all age groups",
     color: "from-purple-500/20 to-pink-500/20",
     iconColor: "text-purple-500",
   },
   {
-    icon: Heart,
+    icon: "Heart",
     title: "Meditation & Pranayama",
     description: "Breathing exercises to promote mental peace and stress reduction",
     color: "from-red-500/20 to-rose-500/20",
     iconColor: "text-red-500",
   },
   {
-    icon: Leaf,
+    icon: "Leaf",
     title: "Educational Materials",
     description: "Distribution of educational pamphlets about the benefits of regular yoga practice",
     color: "from-yellow-500/20 to-orange-500/20",
     iconColor: "text-yellow-500",
   },
   {
-    icon: Users,
+    icon: "Users",
     title: "Community Participation",
     description: "Participation of local community members, youth, women, and senior citizens",
     color: "from-teal-500/20 to-cyan-500/20",

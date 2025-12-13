@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { EventPageContent } from "@/components/sections/event-page-content";
-import { Users, Award, Heart, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Workers' Day Celebration | Swami Vivekanand Seva Trust",
@@ -19,28 +18,28 @@ export default function WorkersDayPage() {
       description="Celebrating the invaluable contributions of workers, artisans, and skilled professionals while honoring DDU-GKY program graduates and their successful employment journeys."
       eventHighlights={[
         {
-          icon: Users,
+          icon: "Users",
           title: "Skilled Workforce Honor",
           description: "Celebrating 280 DDU-GKY graduates trained in CCTV Supervision and Medical Equipment Assistance bringing modern skills to rural communities.",
           color: "blue",
           iconColor: "blue"
         },
         {
-          icon: Wrench,
+          icon: "Wrench",
           title: "Skill Demonstrations",
           description: "Live showcases by trainees demonstrating CCTV installation, maintenance techniques, and clinical equipment proficiency.",
           color: "orange",
           iconColor: "orange"
         },
         {
-          icon: Award,
+          icon: "Award",
           title: "Success Stories",
           description: "Celebrating 199 successfully placed candidates who transformed from unemployed rural youth to skilled professionals.",
           color: "green",
           iconColor: "green"
         },
         {
-          icon: Heart,
+          icon: "Heart",
           title: "Rights & Empowerment",
           description: "Awareness sessions on workers' rights, safety measures, and continuous skill upgradation for professional growth.",
           color: "purple",

@@ -1,22 +1,6 @@
 "use client";
 
 import { EventTemplate } from "@/components/sections/event-template";
-import { 
-  Flag,
-  Users, 
-  Mic, 
-  Music,
-  BookOpen,
-  Heart,
-  Calendar,
-  MapPin,
-  Clock,
-  Award,
-  Globe,
-  Lightbulb,
-  Smile,
-  Target
-} from "lucide-react";
 
 export default function IndependenceDayClient() {
   const independenceDayData = {
@@ -32,22 +16,22 @@ export default function IndependenceDayClient() {
     
     features: [
       {
-        icon: Flag,
+        icon: "Flag",
         title: "Flag Hoisting Ceremony",
         description: "National Flag hoisting by Trust President with soulful National Anthem creating sense of national pride and reverence."
       },
       {
-        icon: Mic,
+        icon: "Mic",
         title: "Inspirational Speeches",
         description: "Trust Secretary's inspiring speech on India's independence journey, Atmanirbhar Bharat, and youth empowerment for nation's future."
       },
       {
-        icon: Music,
+        icon: "Music",
         title: "Cultural Programs",
         description: "Patriotic songs, dance performances, and freedom struggle plays by trainees bringing alive the spirit of independence and unity."
       },
       {
-        icon: BookOpen,
+        icon: "BookOpen",
         title: "Interactive Quiz & Cleanliness Drive",
         description: "History quiz on freedom movement and Swachh Bharat cleanliness drive promoting national development beyond celebration."
       }
@@ -57,22 +41,22 @@ export default function IndependenceDayClient() {
       {
         label: "Independence Day",
         value: "77th",
-        icon: Flag
+        icon: "Flag"
       },
       {
         label: "Participants",
         value: "150+",
-        icon: Users
+        icon: "Users"
       },
       {
         label: "Cultural Programs",
         value: "6+",
-        icon: Music
+        icon: "Music"
       },
       {
         label: "Community Impact",
         value: "High",
-        icon: Heart
+        icon: "Heart"
       }
     ],
 

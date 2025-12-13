@@ -1,11 +1,10 @@
 "use client";
 
 import { EventPageContent } from "./event-page-content";
-import { Flag, Users, Mic, Music, MessageCircle, TreePine } from "lucide-react";
 
 const republicDayEventHighlights = [
   {
-    icon: Flag,
+    icon: "Flag",
     title: "Flag Hoisting & National Anthem",
     description:
       "The celebration began early in the morning with the hoisting of the National Flag by the Trust's President, followed by the singing of the National Anthem. The atmosphere was filled with pride, patriotism, and a sense of responsibility towards building a stronger nation.",
@@ -13,7 +12,7 @@ const republicDayEventHighlights = [
     iconColor: "text-orange-500",
   },
   {
-    icon: Mic,
+    icon: "Mic",
     title: "Motivational Speech",
     description:
       "A motivational speech was delivered by the Trust Secretary, emphasizing the values of democracy, equality, and unity as enshrined in the Indian Constitution. The message resonated with everyone present, inspiring the youth to actively participate in nation-building efforts.",
@@ -21,7 +20,7 @@ const republicDayEventHighlights = [
     iconColor: "text-blue-500",
   },
   {
-    icon: Music,
+    icon: "Music",
     title: "Cultural Performances",
     description:
       "Trainees from various skill development programs conducted a series of cultural performances, including patriotic songs, skits highlighting India's freedom struggle, and group dances. These performances symbolized the diversity and unity of India.",
@@ -29,7 +28,7 @@ const republicDayEventHighlights = [
     iconColor: "text-purple-500",
   },
   {
-    icon: MessageCircle,
+    icon: "MessageCircle",
     title: "Interactive Session",
     description:
       "An interactive session was organized where trainees shared their thoughts on the importance of the Republic Day, their dreams for India, and the role of youth in transforming society.",
@@ -37,7 +36,7 @@ const republicDayEventHighlights = [
     iconColor: "text-green-500",
   },
   {
-    icon: TreePine,
+    icon: "TreePine",
     title: "Tree Plantation Drive",
     description:
       "The Trust also organized a tree plantation drive to mark the occasion, reinforcing the commitment towards environmental sustainability along with nation-building.",

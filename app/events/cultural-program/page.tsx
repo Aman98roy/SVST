@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { EventPageContent } from "@/components/sections/event-page-content";
-import { Music, Users, Award, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Cultural Programs | Swami Vivekanand Seva Trust",
@@ -19,28 +18,28 @@ export default function CulturalProgramPage() {
       description="Vibrant cultural programs celebrating Maharashtra's rich heritage, featuring traditional arts, folk performances, and community participation that preserves our cultural legacy for future generations."
       eventHighlights={[
         {
-          icon: Music,
+          icon: "Music",
           title: "Traditional Folk Arts",
           description: "Authentic Maharashtrian performances including Lavani, Tamasha, Koli dance, and Dhangari Gaja by local artists.",
           color: "orange",
           iconColor: "orange"
         },
         {
-          icon: Users,
+          icon: "Users",
           title: "Community Talent Showcase",
           description: "Platforms for rural talents to showcase poetry, music, dance, and dramatic presentations at village and district levels.",
           color: "blue",
           iconColor: "blue"
         },
         {
-          icon: Award,
+          icon: "Award",
           title: "Festival Celebrations",
           description: "Cultural programs during Gudi Padwa, Ganesh Chaturthi, Navratri with traditional cooking and storytelling.",
           color: "purple",
           iconColor: "purple"
         },
         {
-          icon: Heart,
+          icon: "Heart",
           title: "Cultural Education",
           description: "Workshops teaching traditional crafts, instruments, and dance forms led by master craftsmen and experienced artists.",
           color: "green",

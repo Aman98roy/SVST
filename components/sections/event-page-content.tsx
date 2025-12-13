@@ -1,11 +1,50 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, MapPin, LucideIcon } from "lucide-react";
+import { 
+  Calendar, 
+  MapPin, 
+  Users, 
+  Award, 
+  Heart, 
+  Music,
+  Flag,
+  Mic,
+  BookOpen,
+  Target,
+  Globe,
+  Lightbulb,
+  Smile,
+  Wrench,
+  MessageCircle,
+  Leaf,
+  Sparkles
+} from "lucide-react";
 import { EventImageSlider } from "./event-image-slider";
 
+// Icon mapping for EventPageContent
+const iconMap: { [key: string]: any } = {
+  Calendar,
+  MapPin,
+  Users,
+  Award,
+  Heart,
+  Music,
+  Flag,
+  Mic,
+  BookOpen,
+  Target,
+  Globe,
+  Lightbulb,
+  Smile,
+  Wrench,
+  MessageCircle,
+  Leaf,
+  Sparkles
+};
+
 interface EventHighlight {
-  icon: LucideIcon;
+  icon: string;
   title: string;
   description: string;
   color: string;
@@ -240,7 +279,7 @@ export function EventPageContent({
           
           <div className="space-y-4 sm:space-y-6">
             {eventHighlights.map((highlight, index) => {
-              const Icon = highlight.icon;
+              const Icon = iconMap[highlight.icon] || iconMap.Target;
               const isLeft = index % 2 === 0;
               return (
                 <motion.div

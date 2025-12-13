@@ -258,19 +258,19 @@ export function Gallery() {
     setIsFocusMode(true); // Reset to focus mode for next time
   };
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     const currentIndex = filteredAndSortedImages.findIndex(img => img.id === modalImage?.id);
     const prevIndex = currentIndex > 0 ? currentIndex - 1 : filteredAndSortedImages.length - 1;
     setModalImage(filteredAndSortedImages[prevIndex]);
     setModalIndex(prevIndex);
-  };
+  }, [filteredAndSortedImages, modalImage]);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     const currentIndex = filteredAndSortedImages.findIndex(img => img.id === modalImage?.id);
     const nextIndex = currentIndex < filteredAndSortedImages.length - 1 ? currentIndex + 1 : 0;
     setModalImage(filteredAndSortedImages[nextIndex]);
     setModalIndex(nextIndex);
-  };
+  }, [filteredAndSortedImages, modalImage]);
 
   const handleModalNavigate = (index: number) => {
     setModalIndex(index);
@@ -324,7 +324,7 @@ export function Gallery() {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isModalOpen, isFullscreen, modalImage]);
+  }, [isModalOpen, isFullscreen, modalImage, goToNext, goToPrevious, isFocusMode]);
 
   const filters: FilterType[] = ['All', 'Training', 'Events', 'Activities'];
   const sortOptions: { value: SortType; label: string }[] = [

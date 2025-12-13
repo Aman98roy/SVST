@@ -1,22 +1,6 @@
 "use client";
 
 import { EventTemplate } from "@/components/sections/event-template";
-import { 
-  Flag,
-  Users, 
-  Mic, 
-  Music,
-  TreePine,
-  Heart,
-  Calendar,
-  MapPin,
-  Clock,
-  Award,
-  Globe,
-  Lightbulb,
-  Smile,
-  Target
-} from "lucide-react";
 
 export default function RepublicDayClient() {
   const republicDayData = {
@@ -32,22 +16,22 @@ export default function RepublicDayClient() {
     
     features: [
       {
-        icon: Flag,
+        icon: "Flag",
         title: "Flag Hoisting Ceremony",
         description: "Early morning National Flag hoisting by Trust's President followed by National Anthem sung with pride and patriotism."
       },
       {
-        icon: Mic,
+        icon: "Mic",
         title: "Motivational Speeches",
         description: "Inspiring speeches by Trust Secretary emphasizing democracy, equality, and unity values enshrined in Indian Constitution."
       },
       {
-        icon: Music,
+        icon: "Music",
         title: "Cultural Performances",
         description: "Patriotic songs, freedom struggle skits, and group dances by trainees symbolizing India's diversity and unity."
       },
       {
-        icon: TreePine,
+        icon: "TreePine",
         title: "Tree Plantation Drive",
         description: "Environmental sustainability initiative marking the occasion with commitment towards nation-building and ecological responsibility."
       }
@@ -57,22 +41,22 @@ export default function RepublicDayClient() {
       {
         label: "Republic Day",
         value: "76th",
-        icon: Flag
+        icon: "Flag"
       },
       {
         label: "Participants",
         value: "200+",
-        icon: Users
+        icon: "Users"
       },
       {
-        label: "Cultural Programs",
+        label: "Cultural Items",
         value: "8+",
-        icon: Music
+        icon: "Music"
       },
       {
         label: "Trees Planted",
         value: "50+",
-        icon: TreePine
+        icon: "TreePine"
       }
     ],
 

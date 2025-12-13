@@ -1,22 +1,6 @@
 "use client";
 
 import { EventTemplate } from "@/components/sections/event-template";
-import { 
-  Heart,
-  Users, 
-  Trophy, 
-  Target,
-  Sparkles,
-  Activity,
-  Calendar,
-  MapPin,
-  Clock,
-  Award,
-  Globe,
-  Lightbulb,
-  Smile,
-  CheckCircle
-} from "lucide-react";
 
 export default function YogaDayClient() {
   const yogaDayData = {
@@ -32,32 +16,32 @@ export default function YogaDayClient() {
     
     features: [
       {
-        icon: Heart,
+        icon: "Heart",
         title: "Community Wellness",
         description: "Promoting physical and mental wellness through yoga practice across all age groups in our community."
       },
       {
-        icon: Users,
+        icon: "Users",
         title: "Mass Participation",
         description: "Engaging hundreds of participants from villages and towns in collective yoga sessions."
       },
       {
-        icon: Sparkles,
+        icon: "Sparkles",
         title: "Expert Instruction",
         description: "Certified yoga instructors leading sessions and teaching proper techniques and breathing exercises."
       },
       {
-        icon: Globe,
+        icon: "Globe",
         title: "Universal Appeal",
         description: "Yoga sessions designed for all ages, from children to elderly, making it truly inclusive."
       },
       {
-        icon: Lightbulb,
+        icon: "Lightbulb",
         title: "Health Awareness",
         description: "Educational sessions on the benefits of regular yoga practice and healthy lifestyle choices."
       },
       {
-        icon: Smile,
+        icon: "Smile",
         title: "Stress Relief",
         description: "Focus on meditation and mindfulness techniques to reduce stress and improve mental clarity."
       }
@@ -67,22 +51,22 @@ export default function YogaDayClient() {
       {
         label: "Participants",
         value: "500+",
-        icon: Users
+        icon: "Users"
       },
       {
         label: "Sessions Conducted",
         value: "12",
-        icon: Activity
+        icon: "Activity"
       },
       {
         label: "Age Groups",
         value: "All",
-        icon: Heart
+        icon: "Heart"
       },
       {
         label: "Villages Covered",
         value: "15+",
-        icon: MapPin
+        icon: "MapPin"
       }
     ],
 
