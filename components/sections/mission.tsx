@@ -64,7 +64,7 @@ export function Mission() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <section className="pt-20 pb-8 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -81,10 +81,10 @@ export function Mission() {
           >
             Our Foundation
           </motion.span>
-          <h2 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-gray-900 dark:text-white mb-4">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
             Our Core Values
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto content-text">
             Building a better future through dedicated service and community
             empowerment
           </p>
@@ -161,7 +161,7 @@ export function Mission() {
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 + 0.5 }}
-                      className="text-gray-600 dark:text-gray-300 leading-relaxed text-base sm:text-lg"
+                      className="text-gray-600 dark:text-gray-300 leading-relaxed text-base sm:text-lg content-text"
                     >
                       {value.description}
                     </motion.p>

@@ -7,7 +7,7 @@ import { Heart, ArrowRight } from "lucide-react";
 
 export function DonationCTA() {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-500 via-primary-600 to-accent-teal relative overflow-hidden">
+    <section className="py-12 bg-gradient-to-br from-primary-500 via-primary-600 to-accent-teal relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -33,10 +33,10 @@ export function DonationCTA() {
             <Heart className="w-10 h-10 text-white" />
           </motion.div>
 
-          <h2 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-white mb-6">
             Make a Difference Today
           </h2>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed">
+          <p className="text-xl text-white/90 mb-8 leading-relaxed content-text">
             Your contribution helps us continue our mission of empowering
             communities, protecting the environment, and promoting cultural
             diversity. Every donation, no matter how small, creates a lasting

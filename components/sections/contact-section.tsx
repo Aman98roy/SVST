@@ -8,7 +8,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export function ContactSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+    <section className="py-12 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -17,7 +17,7 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-heading font-bold text-4xl sm:text-5xl text-gray-900 dark:text-white mb-4">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
             Leave Us A Message
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -62,12 +62,18 @@ export function ContactSection() {
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
                       Phone
                     </h3>
-                    <a
-                      href="tel:+919552521646"
-                      className="text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors"
-                    >
-                      +91 9552521646
-                    </a>
+                    <div className="space-y-1">
+                      <a
+                        href="tel:+912456789101"
+                        className="text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors block"
+                      >
+                        +91 24567-89101 (Landline)
+                      </a>
+                      <div className="text-xs text-gray-500 dark:text-gray-500">
+                        Contact Hours: 10:00 AM to 06:00 PM<br/>
+                        Six Days a Week (Monday - Saturday)
+                      </div>
+                    </div>
                   </div>
                 </div>
 

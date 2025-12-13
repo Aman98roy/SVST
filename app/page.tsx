@@ -12,10 +12,10 @@ export default function Home() {
     <>
       <Hero />
       <Mission />
-      <Services />
-      <FounderMessage />
       <Events />
       <Testimonials />
+      <Services />
+      <FounderMessage />
       <DonationCTA />
       <ContactSection />
     </>

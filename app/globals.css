@@ -46,6 +46,60 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Text justification utility classes */
+.text-justify {
+  text-align: justify;
+}
+
+.text-justify-center {
+  text-align: justify;
+  text-align-last: center;
+}
+
+/* Enhanced paragraph styling */
+p {
+  line-height: 1.7;
+  hyphens: auto;
+}
+
+/* Improved readability with controlled justification */
+.content-text {
+  text-align: justify;
+  line-height: 1.8;
+  font-weight: 400;
+  hyphens: auto;
+  word-spacing: normal;
+  text-justify: inter-word;
+}
+
+/* Center-aligned content with minimal justification gaps */
+.content-text.text-center {
+  text-align: center !important;
+  word-spacing: normal !important;
+  text-justify: auto !important;
+  hyphens: none !important;
+}
+
+/* Responsive text alignment for smaller screens */
+@media (max-width: 640px) {
+  .content-text {
+    text-align: left;
+    hyphens: none;
+  }
+  
+  p {
+    text-align: left;
+  }
+}
+
+/* Image alignment utilities */
+.img-justified {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
 /* Skip to main content link for accessibility */
 .skip-link {
   position: absolute;

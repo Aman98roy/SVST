@@ -48,10 +48,10 @@ export function JoinUsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="font-heading font-bold text-4xl sm:text-5xl text-gray-900 dark:text-white mb-4">
+          <h1 className="font-heading font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-4">
             Join Us
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto content-text">
             Be part of our mission to empower communities, protect the
             environment, and promote cultural diversity
           </p>
@@ -76,7 +76,7 @@ export function JoinUsSection() {
                     <CardTitle className="text-xl">{opportunity.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col">
-                    <p className="text-gray-600 dark:text-gray-400 mb-6 flex-1">
+                    <p className="text-gray-600 dark:text-gray-400 mb-6 flex-1 content-text">
                       {opportunity.description}
                     </p>
                     <Button variant="outline" className="w-full">

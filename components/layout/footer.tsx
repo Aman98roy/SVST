@@ -33,7 +33,7 @@ export function Footer() {
             <h3 className="font-heading font-bold text-white text-lg mb-4">
               Swami Vivekanand Seva Trust
             </h3>
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-gray-400 mb-4 content-text">
               Dedicated to promoting the empowerment of people, protection of
               the environment, and respect for cultural diversity.
             </p>
@@ -128,14 +128,20 @@ export function Footer() {
                   (India), Pin Code: 431542
                 </span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                <a
-                  href="tel:+919552521646"
-                  className="text-sm text-gray-400 hover:text-primary-400 transition-colors"
-                >
-                  +91 9552521646
-                </a>
+              <li className="flex items-start space-x-3">
+                <Phone className="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" />
+                <div>
+                  <a
+                    href="tel:+912456789101"
+                    className="text-sm text-gray-400 hover:text-primary-400 transition-colors block"
+                  >
+                    +91 24567-89101 (Landline)
+                  </a>
+                  <div className="text-xs text-gray-500 mt-1">
+                    Contact Hours: 10:00 AM - 06:00 PM<br/>
+                    (Monday - Saturday)
+                  </div>
+                </div>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />

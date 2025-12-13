@@ -22,7 +22,7 @@ export function ImpactMeter() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="font-heading font-bold text-4xl sm:text-5xl text-gray-900 dark:text-white mb-4">
+          <h1 className="font-heading font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-4">
             Your Impact Matters
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">

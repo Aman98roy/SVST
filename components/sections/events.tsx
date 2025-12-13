@@ -11,7 +11,7 @@ const events = [
     title: "Swami Vivekananda's Birthday",
     date: "12th January",
     description:
-      "Swami Vivekanand Seva Trust Hingoli has been celebrating Swami Vivekananda's Birthday on 12th January as National Youth Day every year since 2010. The celebration features flag hoisting, youth rallies, cultural programs, inspirational speeches, and discussions on his philosophy.",
+      "Swami Vivekanand Seva Trust Hingoli has been celebrating Swami Vivekananda’s Birthday on 12th January as National Youth Day every year since 2010. The celebration features flag hoisting, youth rallies, cultural programs, inspirational speeches, and discussions on his philosophy. Through these activities, the trust inspires young people to embrace Vivekananda’s values of strength, knowledge, and selfless service, motivating them to contribute actively towards nation-building and social transformation.",
     href: "/events/youth-day",
   },
   {
@@ -32,7 +32,7 @@ const events = [
 
 export function Events() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
+    <section className="py-12 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -41,10 +41,10 @@ export function Events() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-heading font-bold text-4xl sm:text-5xl text-gray-900 dark:text-white mb-4">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
             Our Events
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-center">
             Celebrating our culture, values, and commitment to community service
           </p>
         </motion.div>
@@ -67,8 +67,10 @@ export function Events() {
                   <CardTitle className="text-xl">{event.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 flex-1">
-                    {event.description}
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 flex-1 line-clamp-3">
+                    {event.description.length > 120 
+                      ? `${event.description.substring(0, 120)}...` 
+                      : event.description}
                   </p>
                   <Button variant="outline" size="sm" asChild>
                     <Link href={event.href}>

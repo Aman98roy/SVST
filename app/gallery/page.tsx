@@ -1,16 +1,17 @@
 import { Metadata } from "next";
-import { GalleryGrid } from "@/components/sections/gallery-grid";
+import Gallery from "@/components/sections/gallery";
 
 export const metadata: Metadata = {
-  title: "Gallery",
+  title: "Photo Gallery - SVST",
   description:
-    "View photos and videos from our events, activities, and community programs.",
+    "Explore our comprehensive photo gallery showcasing community initiatives, training programs, events, and transformational stories from across Maharashtra. Discover the impact of Swami Vivekanand Seva Trust's work through powerful imagery.",
+  keywords: "SVST gallery, community photos, training programs, Maharashtra NGO, DDU-GKY training, rural development photos",
 };
 
 export default function GalleryPage() {
   return (
-    <div className="pt-16">
-      <GalleryGrid />
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <Gallery />
     </div>
   );
 }

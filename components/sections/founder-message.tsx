@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { CheckCircle2 } from "lucide-react";
 
 const initiatives = [
   "Rural Entrepreneurship Development Programs",
@@ -24,7 +25,7 @@ const acknowledgments = [
 
 export function FounderMessage() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-primary-50/30 to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <section className="pt-8 pb-12 bg-gradient-to-b from-white via-primary-50/30 to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,20 +36,11 @@ export function FounderMessage() {
         >
           {/* Header Section */}
           <div className="text-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="inline-block mb-6"
-            >
-              <Quote className="w-16 h-16 text-primary-500 mx-auto" />
-            </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-gray-900 dark:text-white mb-4"
+              className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4"
             >
               Founder's Message
             </motion.h2>
@@ -56,11 +48,45 @@ export function FounderMessage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="space-y-2"
+              transition={{ delay: 0.1 }}
             >
-              <p className="text-2xl sm:text-3xl font-bold text-primary-600 dark:text-primary-400">
+              <p className="text-xl sm:text-2xl font-bold text-primary-600 dark:text-primary-400">
                 SWAMI VIVEKANAND SEWA TRUST
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Founder Info Section */}
+          <div className="flex flex-row items-center gap-6 mb-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="w-20 h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <Image
+                src="/images/founder/purushottam-kute.jpg"
+                alt="Purushottam Kute - Founder"
+                width={96}
+                height={96}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="flex-1"
+            >
+              <h3 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                Purushottam Kute
+              </h3>
+              <p className="text-base lg:text-lg text-primary-600 dark:text-primary-400 font-medium mb-1">
+                President, Swami Vivekanand Seva Trust, Hingoli
+              </p>
+              <p className="text-sm lg:text-base text-gray-600 dark:text-gray-400">
+                Founder
               </p>
             </motion.div>
           </div>
@@ -74,35 +100,37 @@ export function FounderMessage() {
             className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden"
           >
             <div className="p-8 sm:p-10 lg:p-12">
-              {/* Greeting */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-                className="mb-8"
-              >
-                <p className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Dear Friends, Well-Wishers, and Supporters,
-                </p>
-              </motion.div>
-
-              {/* Main Message */}
-              <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                <motion.p
+              {/* Greeting with Main Content */}
+              <div className="mb-4">
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.6 }}
+                  transition={{ delay: 0.5 }}
                 >
-                  Having built our capacity for implementing development projects, we have, for the first time, formally approached donors, government agencies, and departments for support and assistance. We are proud to report that our accountable systems and track record as a facilitator have earned us a positive response.
-                </motion.p>
+                  <p className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                    Dear Friends, Well-Wishers, and Supporters,
+                  </p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 }}
+                    className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg"
+                  >
+                    Having built our capacity for implementing development projects, we have, for the first time, formally approached donors, government agencies, and departments for support and assistance. We are proud to report that our accountable systems and track record as a facilitator have earned us a positive response.
+                  </motion.p>
+                </motion.div>
+              </div>
 
+              {/* Main Message */}
+              <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg content-text">
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.7 }}
+                  className="content-text"
                 >
                   As we proudly commemorate a decade of dedicated service, Swami Vivekanand Seva Trust (SVST) reflects on its remarkable journey – from humble beginnings to unprecedented growth. Despite limited resources, our organization has persevered, tackling challenges head-on to create a better life for rural communities.
                 </motion.p>
@@ -129,7 +157,7 @@ export function FounderMessage() {
                         className="flex items-start space-x-3 p-3 rounded-lg bg-primary-50/50 dark:bg-primary-900/20 hover:bg-primary-100/50 dark:hover:bg-primary-900/30 transition-colors"
                       >
                         <CheckCircle2 className="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm sm:text-base">{initiative}</span>
+                        <span className="text-sm sm:text-base content-text">{initiative}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -140,7 +168,7 @@ export function FounderMessage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 1.2 }}
-                  className="mt-8"
+                  className="mt-8 content-text"
                 >
                   Our ultimate aim is to drive reform and modernization by mobilizing all capacities and establishing economic reform that enables us to play a meaningful role in the national economic arena. We look forward to continuing our partnerships and collaborations to achieve our goals.
                 </motion.p>
@@ -167,30 +195,13 @@ export function FounderMessage() {
                         className="flex items-start space-x-3 p-4 rounded-lg bg-gradient-to-r from-primary-50/30 to-accent-emerald/10 dark:from-primary-900/20 dark:to-accent-teal/10 border-l-4 border-primary-500"
                       >
                         <div className="w-2 h-2 rounded-full bg-primary-500 mt-2 flex-shrink-0" />
-                        <p className="text-sm sm:text-base">{ack}</p>
+                        <p className="text-sm sm:text-base content-text">{ack}</p>
                       </motion.div>
                     ))}
                   </div>
                 </motion.div>
 
-                {/* Signature Section */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 1.8 }}
-                  className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-right"
-                >
-                  <p className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                    Purushottam Kute
-                  </p>
-                  <p className="text-primary-600 dark:text-primary-400 font-semibold">
-                    President, Swami Vivekanand Seva Trust, Hingoli
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                    Founder
-                  </p>
-                </motion.div>
+
               </div>
             </div>
           </motion.div>

@@ -4,7 +4,7 @@ import { Home } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center pt-16 px-4">
+    <div className="min-h-screen flex items-center justify-center pt-20 px-4">
       <div className="text-center max-w-md">
         <h1 className="font-heading font-bold text-9xl text-primary-500 mb-4">
           404
@@ -12,7 +12,7 @@ export default function NotFound() {
         <h2 className="font-heading font-bold text-3xl text-gray-900 dark:text-white mb-4">
           Page Not Found
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
+        <p className="text-gray-600 dark:text-gray-400 mb-8 content-text">
           The page you're looking for doesn't exist or has been moved.
         </p>
         <Button size="lg" asChild>

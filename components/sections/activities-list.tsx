@@ -78,10 +78,10 @@ export function ActivitiesList() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="font-heading font-bold text-4xl sm:text-5xl text-gray-900 dark:text-white mb-4">
+          <h1 className="font-heading font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-4">
             Our Activities
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto content-text">
             Comprehensive programs designed to empower communities and promote
             sustainable development
           </p>
@@ -110,7 +110,7 @@ export function ActivitiesList() {
                         <CardTitle className="text-2xl">{activity.title}</CardTitle>
                       </CardHeader>
                       <CardContent className="p-0">
-                        <p className="text-gray-600 dark:text-gray-400 mb-6">
+                        <p className="text-gray-600 dark:text-gray-400 mb-6 content-text">
                           {activity.description}
                         </p>
                         <ul className="grid grid-cols-2 gap-2 mb-6">
