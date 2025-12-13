@@ -1,18 +1,18 @@
 import { Metadata } from "next";
-import { YogaDayContent } from "@/components/sections/yoga-day-content";
+import YogaDayClient from "./yoga-day-client";
 
 export const metadata: Metadata = {
-  title: "International Yoga Day | SVST",
-  description:
-    "Swami Vivekanand Seva Trust, Hingoli actively organizes International Yoga Day (June 21) every year to promote health, well-being, and the holistic benefits of yoga.",
-  keywords: ["Yoga Day", "International Yoga Day", "Yoga", "Health", "Wellness", "SVST", "Hingoli"],
+  title: "International Yoga Day | SVST - Celebrating Wellness & Inner Peace",
+  description: "Join SVST's International Yoga Day celebration promoting physical and mental wellness through yoga practice, meditation, and community wellness activities across rural villages.",
+  keywords: ["international yoga day", "wellness", "mindfulness", "yoga practice", "community health", "SVST", "physical fitness", "mental health", "meditation", "rural wellness"],
+  openGraph: {
+    title: "International Yoga Day | SVST - Celebrating Wellness & Inner Peace",
+    description: "Community-wide yoga celebration promoting health, wellness, and spiritual harmony with 500+ participants across 15+ villages.",
+    images: ["/images/Events/YogaDay/main.jpeg"],
+  },
 };
 
 export default function YogaDayPage() {
-  return (
-    <div>
-      <YogaDayContent />
-    </div>
-  );
+  return <YogaDayClient />;
 }
 

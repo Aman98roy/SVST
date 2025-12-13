@@ -2,103 +2,207 @@
 
 import { ActivityTemplate } from "@/components/sections/activity-template";
 import { BookOpen, Users2, Sprout, TrendingUp, GraduationCap, Lightbulb, Clock, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
+
+// Training Statistics Table Component
+const TrainingStatsTable = () => {
+  const trainingData = {
+    title: "Training Program Statistics (2011-2025)",
+    description: "Comprehensive data showing the reach and impact of our farmers training initiatives across different agricultural sectors in Hingoli district.",
+    headers: ["Activity", "Program Location/Venue Taluka", "No of Farmers"],
+    rows: [
+      ["Dairy", "Hingoli, Sengaon, Aundha (Na), Kalamnuri", "3,500"],
+      ["Turmeric Processing", "Hingoli, Sengaon, Aundha (Na), Kalamnuri", "2,200"],
+      ["Goat Farming", "Hingoli, Sengaon, Aundha (Na), Kalamnuri", "3,000"],
+      ["Poultry", "Hingoli, Sengaon, Aundha (Na), Kalamnuri", "3,000"]
+    ],
+    total: 11700
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700"
+    >
+      <h3 className="font-heading font-bold text-xl text-gray-900 dark:text-white mb-3">
+        {trainingData.title}
+      </h3>
+      <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
+        {trainingData.description}
+      </p>
+      
+      <div className="overflow-x-auto">
+        <table className="w-full">
+          <thead>
+            <tr className="bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+              {trainingData.headers.map((header, index) => (
+                <th key={index} className="px-4 py-3 text-left font-semibold text-xs uppercase tracking-wider">
+                  {header}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+            {trainingData.rows.map((row, index) => (
+              <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                {row.map((cell, cellIndex) => (
+                  <td key={cellIndex} className="px-4 py-3 text-sm text-gray-900 dark:text-gray-100">
+                    {cellIndex === 2 ? (
+                      <span className="font-semibold text-orange-600 dark:text-orange-400">
+                        {cell}
+                      </span>
+                    ) : (
+                      cell
+                    )}
+                  </td>
+                ))}
+              </tr>
+            ))}
+            <tr className="bg-orange-50 dark:bg-orange-900/20 font-semibold">
+              <td className="px-4 py-3 text-gray-900 dark:text-gray-100 font-bold text-sm">
+                Total
+              </td>
+              <td className="px-4 py-3 text-gray-900 dark:text-gray-100 text-sm">
+                All Talukas
+              </td>
+              <td className="px-4 py-3 text-orange-600 dark:text-orange-400 font-bold">
+                {trainingData.total}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </motion.div>
+  );
+};
 
 const activityData = {
-  title: "District Level Farmers Training",
-  subtitle: "Empowering Agriculture Through Knowledge",
-  description: "Comprehensive training programs that empower farmers with modern agricultural knowledge, sustainable farming techniques, and innovative practices to enhance productivity, income, and environmental sustainability.",
-  mainImage: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&h=600&fit=crop",
-  category: "Agricultural Education",
-  location: "Multiple Villages, Hingoli",
-  duration: "Ongoing Sessions",
-  beneficiaries: "1,200+ Farmers",
+  title: "District Level Farmers Training Program",
+  subtitle: "Sponsored by ATMA, Hingoli District, Maharashtra",
+  description: "In partnership with SVST, ATMA successfully conducted a comprehensive District Level Farmers Training Program in Hingoli, benefiting 2,000 farmers across five blocks: Hingoli, Sengaon, Aundha Nagnath, and Kalamnuri.",
+  mainImage: "/images/activities/farmers-training/hero-image.JPG",
+  category: "Agricultural Training",
+  location: "Hingoli, Sengaon, Aundha Nagnath, Kalamnuri",
+  duration: "2011 - 2025 (Ongoing)",
+  beneficiaries: "11,700+ Farmers",
   features: [
     {
       icon: BookOpen,
-      title: "Modern Techniques",
-      description: "Training on latest agricultural technologies, precision farming, and scientific crop management practices."
+      title: "Dairy Farming",
+      description: "Modern livestock management, milking practices, and animal health training for improved dairy productivity."
     },
     {
       icon: Sprout,
-      title: "Sustainable Practices",
-      description: "Organic farming methods, natural pest management, and environmentally friendly agricultural approaches."
+      title: "Turmeric Processing",
+      description: "Post-harvest methods, drying, curing, and packaging techniques for value-added turmeric products."
+    },
+    {
+      icon: Users2,
+      title: "Sericulture",
+      description: "Harvesting and processing techniques for silk production and value-added sericulture products."
     },
     {
       icon: TrendingUp,
-      title: "Financial Literacy",
-      description: "Market analysis, crop planning for better returns, and agricultural business management skills."
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation Workshop",
-      description: "Hands-on training with modern equipment, tools, and innovative farming solutions for increased efficiency."
+      title: "Goat & Poultry Farming",
+      description: "Breeding, disease management, nutrition, vaccination, and biosecurity for livestock farming."
     }
   ],
   stats: [
     {
-      label: "Farmers Trained",
-      value: "1,200+",
+      label: "Total Farmers Trained",
+      value: "11,700+",
       icon: Users2
     },
     {
-      label: "Training Sessions",
-      value: "150+",
+      label: "Dairy Farmers",
+      value: "3,500",
       icon: GraduationCap
     },
     {
-      label: "Income Increase",
-      value: "40%",
-      icon: TrendingUp
+      label: "Training Areas",
+      value: "5 Key Sectors",
+      icon: BookOpen
     },
     {
-      label: "Villages Covered",
-      value: "25+",
-      icon: MapPin
+      label: "Program Duration",
+      value: "14+ Years",
+      icon: Clock
     }
   ],
   gallery: [
     {
-      src: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop",
+      src: "/images/activities/farmers-training/FARMERS TRAINING.jpeg",
+      alt: "District Level Farmers Training Program",
+      caption: "Comprehensive training program conducted by ATMA and SVST"
+    },
+    {
+      src: "/images/activities/farmers-training/FARMERS TRAINING 2.jpeg",
       alt: "Farmers training session in progress",
       caption: "Interactive training session on modern farming techniques"
     },
     {
-      src: "https://images.unsplash.com/photo-1574263867128-a3d5c1b1deae?w=800&h=600&fit=crop",
-      alt: "Hands-on demonstration of equipment",
-      caption: "Practical demonstration of modern agricultural equipment"
+      src: "/images/activities/farmers-training/FARMERS TRAINING 3.jpeg",
+      alt: "Practical demonstration session",
+      caption: "Hands-on training demonstration for farmers"
     },
     {
-      src: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800&h=600&fit=crop",
-      alt: "Sustainable farming workshop",
-      caption: "Workshop on organic and sustainable farming practices"
+      src: "/images/activities/farmers-training/FARMERS TRAINING 5.jpeg",
+      alt: "Training workshop for dairy farming",
+      caption: "Specialized training on dairy farming and livestock management"
     },
     {
-      src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop",
-      alt: "Field visit and practical training",
-      caption: "Field visits for practical application of learned techniques"
+      src: "/images/activities/farmers-training/FARMERS TRAINING 6.jpeg",
+      alt: "Group training session",
+      caption: "Farmers learning about sustainable agricultural practices"
     },
     {
-      src: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop",
-      alt: "Group discussion among farmers",
-      caption: "Farmers sharing experiences and best practices"
+      src: "/images/activities/farmers-training/IMG-20170316-WA0001.jpg",
+      alt: "Field demonstration",
+      caption: "Practical field demonstration of training techniques"
     },
     {
-      src: "https://images.unsplash.com/photo-1592419044706-39ad99ad86d4?w=800&h=600&fit=crop",
-      alt: "Certificate distribution ceremony",
-      caption: "Certificate distribution to successful participants"
+      src: "/images/activities/farmers-training/IMG-20170316-WA0002.jpg",
+      alt: "Farmers training documentation",
+      caption: "Documenting training progress and farmer participation"
+    },
+    {
+      src: "/images/activities/farmers-training/04.jpg",
+      alt: "Training program certificate distribution",
+      caption: "Recognition and certification of trained farmers"
     }
   ],
   content: {
-    overview: "The District Level Farmers Training Program is a flagship initiative designed to transform agricultural practices across rural Maharashtra. Through systematic knowledge transfer and practical demonstrations, we bridge the gap between traditional farming methods and modern scientific approaches, ensuring sustainable agricultural development and improved livelihoods for farming communities.",
+    overview: "In partnership with SVST, ATMA successfully conducted a comprehensive District Level Farmers Training Program in Hingoli, benefiting 2,000 farmers across five blocks: Hingoli, Sengaon, Aundha Nagnath, and Kalamnuri. This flagship program represents a transformative approach to agricultural development in Maharashtra.",
     objectives: [
-      "Transfer modern agricultural knowledge and techniques to rural farmers",
-      "Promote sustainable and organic farming practices for environmental conservation",
-      "Enhance farmers' income through improved productivity and market linkages",
-      "Build capacity in agricultural business management and financial planning",
-      "Create a network of trained farmers who can mentor others in their communities"
+      "Enhance farmers' skills and knowledge in key agricultural sectors",
+      "Boost productivity and income through modern farming techniques",
+      "Promote sustainable agricultural practices and environmental conservation",
+      "Transfer knowledge in dairy farming, turmeric processing, sericulture, goat farming, and poultry",
+      "Create a network of skilled farmers who can mentor others in their communities"
     ],
-    methodology: "Our training approach combines theoretical knowledge with hands-on practical sessions. Programs include classroom sessions, field demonstrations, expert lectures, peer-to-peer learning, and follow-up support. We use local language materials, visual aids, and culturally appropriate teaching methods to ensure effective knowledge transfer. Each program is tailored to local crop patterns, soil conditions, and market opportunities.",
-    impact: "Over 1,200 farmers across 25 villages have completed our training programs, reporting an average 40% increase in agricultural income. Adoption of sustainable practices has improved soil health in 80% of participating farms. The program has created 50 master trainers who continue to educate other farmers in their communities, creating a multiplier effect that extends our reach and impact sustainably."
+    methodology: "The program's unique blend of theoretical knowledge and hands-on experiences equipped farmers with practical skills to implement new techniques. Training covered five critical areas with specialized focus on local agricultural needs and market opportunities. Each session was conducted in local language with visual aids and culturally appropriate teaching methods.",
+    impact: "The District Level Farmers Training Program empowered 2,000 farmers, promoting sustainable agricultural practices, improving economic conditions, and enhancing the agricultural landscape of Hingoli. By empowering farmers with knowledge and skills in these critical areas, the program aims to enhance agricultural productivity, improve livelihoods, and contribute to the overall development of the farming community.",
+    trainingData: {
+      title: "Training Program Statistics (2011-2025)",
+      description: "Comprehensive data showing the reach and impact of our farmers training initiatives across different agricultural sectors in Hingoli district.",
+      headers: ["Activity", "Program Location/Venue Taluka", "No of Farmers"],
+      rows: [
+        ["Dairy", "Hingoli, Sengaon, Aundha (Na), Kalamnuri", "3,500"],
+        ["Turmeric Processing", "Hingoli, Sengaon, Aundha (Na), Kalamnuri", "2,200"],
+        ["Goat Farming", "Hingoli, Sengaon, Aundha (Na), Kalamnuri", "3,000"],
+        ["Poultry", "Hingoli, Sengaon, Aundha (Na), Kalamnuri", "3,000"]
+      ],
+      total: 11700
+    },
+    highlights: [
+      "Throughout the year, our organization carried out a range of development activities under this project, building on earlier successes",
+      "These initiatives further strengthened our commitment to supporting farmers and promoting sustainable agriculture in Hingoli",
+      "The program's impact extends beyond individual farmers to transform entire agricultural communities",
+      "Continuous monitoring and evaluation ensure sustainable adoption of taught practices"
+    ]
   }
 };
 

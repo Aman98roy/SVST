@@ -1,104 +1,89 @@
 "use client";
 
 import { ActivityTemplate } from "@/components/sections/activity-template";
-import { Flask, Leaf, Recycle, Shield, Microscope, Seedling, Target, Award } from "lucide-react";
+import { Beaker, Leaf, Recycle, Shield, Microscope, Sprout, Target, Award } from "lucide-react";
 
 const activityData = {
   title: "Biological Input Laboratory",
-  subtitle: "Pioneering Organic Agricultural Solutions",
-  description: "Advanced research and development facility focused on creating organic farming inputs, biofertilizers, and eco-friendly agricultural solutions that promote sustainable farming practices while maintaining high productivity levels.",
-  mainImage: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&h=600&fit=crop",
-  category: "Research & Development",
-  location: "SVST Campus, Hingoli",
-  duration: "Continuous Research",
-  beneficiaries: "800+ Farmers",
+  subtitle: "Empowering Sustainable Agriculture",
+  description: "The Swami Vivekanand Seva Trust's (SVST) Biological Input Laboratory in Hingoli, Maharashtra, is a pioneering initiative promoting sustainable agriculture in the region. Sanctioned by the Agriculture Department, Hingoli, this laboratory produces and supplies biological inputs, enabling farmers to reduce their reliance on chemical fertilizers and pesticides.",
+  mainImage: "/images/activities/biological-input/hero-image.jpg",
+  category: "Sustainable Agriculture",
+  location: "Hingoli, Maharashtra",
+  duration: "Ongoing Operations",
+  beneficiaries: "Regional Farming Community",
   features: [
     {
-      icon: Flask,
-      title: "Biofertilizer Production",
-      description: "Development and production of high-quality biofertilizers using beneficial microorganisms for sustainable crop nutrition."
+      icon: Beaker,
+      title: "Trichoderma",
+      description: "A beneficial fungus controlling soil-borne diseases and improving soil health for enhanced crop protection and growth."
     },
     {
       icon: Leaf,
-      title: "Organic Pesticides",
-      description: "Research and formulation of natural pest control solutions using plant extracts and beneficial microbes."
-    },
-    {
-      icon: Recycle,
-      title: "Waste Composting",
-      description: "Converting agricultural waste into valuable organic compost through advanced decomposition techniques."
+      title: "Vermi Compost",
+      description: "An organic fertilizer made from earthworms, enhancing soil fertility and structure for sustainable crop nutrition."
     },
     {
       icon: Shield,
-      title: "Quality Assurance",
-      description: "Rigorous testing and quality control to ensure all biological inputs meet safety and efficacy standards."
+      title: "Metarhizium",
+      description: "An entomopathogenic fungus used for controlling pests naturally without harmful chemical pesticides."
+    },
+    {
+      icon: Microscope,
+      title: "Azotobacter",
+      description: "A nitrogen-fixing bacterium improving soil fertility by increasing nitrogen availability to plants naturally."
     }
   ],
   stats: [
     {
-      label: "Products Developed",
-      value: "15+",
-      icon: Flask
-    },
-    {
-      label: "Farmers Benefited",
-      value: "800+",
-      icon: Seedling
+      label: "Biological Inputs",
+      value: "4 Types",
+      icon: Beaker
     },
     {
       label: "Chemical Reduction",
-      value: "60%",
+      value: "Significant",
       icon: Target
     },
     {
-      label: "Research Projects",
-      value: "25+",
-      icon: Microscope
+      label: "Soil Health",
+      value: "Enhanced",
+      icon: Leaf
+    },
+    {
+      label: "Sustainability",
+      value: "Promoted",
+      icon: Award
     }
   ],
   gallery: [
     {
-      src: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop",
-      alt: "Biological input laboratory research facility",
-      caption: "State-of-the-art laboratory for biological input research"
+      src: "/images/activities/biological-input/Bio Input 01.JPG",
+      alt: "Biological Input Laboratory facility",
+      caption: "SVST's Biological Input Laboratory sanctioned by Agriculture Department, Hingoli"
     },
     {
-      src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
-      alt: "Biofertilizer production process",
-      caption: "Biofertilizer production using beneficial microorganisms"
+      src: "/images/activities/biological-input/Bio Input 03.JPG",
+      alt: "Biological input production process",
+      caption: "Production of specialized biological inputs for sustainable agriculture"
     },
     {
-      src: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&h=600&fit=crop",
-      alt: "Organic compost preparation",
-      caption: "Organic compost preparation from agricultural waste"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1574263867128-a3d5c1b1deae?w=800&h=600&fit=crop",
-      alt: "Quality testing of biological inputs",
-      caption: "Quality testing and analysis of biological products"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop",
-      alt: "Field testing of organic inputs",
-      caption: "Field trials and testing of organic agricultural inputs"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop",
-      alt: "Farmer training on organic inputs",
-      caption: "Training farmers on proper use of biological inputs"
+      src: "/images/activities/biological-input/Bio Input 04.JPG",
+      alt: "Quality biological inputs ready for distribution",
+      caption: "High-quality biological inputs produced using advanced standards"
     }
   ],
   content: {
-    overview: "The Biological Input Laboratory represents SVST's commitment to sustainable agriculture through scientific innovation. This cutting-edge facility combines traditional knowledge with modern biotechnology to develop organic farming solutions that reduce dependency on chemical inputs while maintaining agricultural productivity. Our laboratory serves as a research hub for developing eco-friendly alternatives to synthetic fertilizers and pesticides.",
+    overview: "The Swami Vivekanand Seva Trust's (SVST) Biological Input Laboratory in Hingoli, Maharashtra, is a pioneering initiative promoting sustainable agriculture in the region. Sanctioned by the Agriculture Department, Hingoli, this laboratory produces and supplies biological inputs, enabling farmers to reduce their reliance on chemical fertilizers and pesticides.",
     objectives: [
-      "Develop cost-effective biofertilizers and organic inputs for smallholder farmers",
-      "Research and formulate natural pest management solutions using indigenous resources",
-      "Convert agricultural waste into valuable organic amendments through scientific processes",
-      "Provide quality-assured biological products that enhance soil health and crop productivity",
-      "Transfer technology and knowledge to farmers for sustainable agricultural practices"
+      "Promote sustainable agricultural practices through biological inputs",
+      "Enhance farm productivity using eco-friendly farming methods",
+      "Support the local farming community in Hingoli and surrounding regions",
+      "Reduce dependency on chemical fertilizers and pesticides",
+      "Contribute to a more sustainable and environmentally conscious agricultural ecosystem"
     ],
-    methodology: "Our research methodology integrates microbiology, soil science, and plant pathology to develop effective biological solutions. We isolate beneficial microorganisms from local soil, optimize their growth conditions, and formulate them into user-friendly products. Each product undergoes extensive laboratory testing, greenhouse trials, and field validation before being released to farmers. Quality control protocols ensure consistency and efficacy of all biological inputs.",
-    impact: "The laboratory has successfully developed 15 biological products that are now used by over 800 farmers across the region. Farmers using our biological inputs have reported a 60% reduction in chemical fertilizer usage and 25% improvement in soil health indicators. The initiative has prevented over 10,000 tons of agricultural waste from being burned, converting it into valuable organic matter. Our research has also contributed to academic publications and policy recommendations for organic farming promotion."
+    methodology: "These biological inputs are produced using high-quality standards and distributed to farmers, empowering them to adopt eco-friendly farming practices. The laboratory specializes in producing four main biological inputs: Trichoderma for disease control and soil health, Vermi Compost for organic fertilization, Metarhizium for natural pest control, and Azotobacter for nitrogen fixation and soil fertility enhancement.",
+    impact: "By providing access to biological inputs, SVST's laboratory is contributing to a more sustainable and environmentally conscious agricultural ecosystem in the region. This initiative is part of SVST's commitment to promoting sustainable agricultural practices, enhancing farm productivity, and supporting the local farming community in Hingoli and surrounding regions through environmentally responsible farming solutions."
   }
 };
 

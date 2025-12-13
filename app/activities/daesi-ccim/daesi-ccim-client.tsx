@@ -4,101 +4,122 @@ import { ActivityTemplate } from "@/components/sections/activity-template";
 import { Users, GraduationCap, Network, Lightbulb, Building, HandHeart, Target, Award } from "lucide-react";
 
 const activityData = {
-  title: "DAESI & CCIM Programs",
-  subtitle: "Building Capacity for Rural Development",
-  description: "Comprehensive training programs for agricultural extension workers and community development initiatives, focusing on building institutional capacity for sustainable rural development and effective agricultural extension services.",
-  mainImage: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200&h=600&fit=crop",
-  category: "Capacity Building",
-  location: "Hingoli & Surrounding Districts",
-  duration: "Multi-year Program",
-  beneficiaries: "300+ Extension Workers",
+  title: "D.A.E.S.I & C.C.I.M Programs",
+  subtitle: "Sponsored by National Institute of Agricultural Extension Management (MANAGE), Hyderabad",
+  description: "Comprehensive training programs including the 48-week DAESI program for agricultural extension services and the 12-week CCIM program for insecticides management, both designed to enhance professional development and promote sustainable agricultural practices.",
+  mainImage: "/images/activities/daesi-ccim/hero-image.JPG",
+  category: "Professional Training",
+  location: "District Hingoli",
+  duration: "2020 - 2025 (Ongoing)",
+  beneficiaries: "500+ Professionals",
   features: [
     {
       icon: GraduationCap,
-      title: "Extension Training",
-      description: "Comprehensive training programs for agricultural extension workers on modern extension methodologies and farmer engagement."
+      title: "DAESI Program (48 weeks)",
+      description: "Comprehensive training for input dealers with 40 days classroom training and 8 exposure visits covering modern agricultural practices and pest management."
     },
     {
-      icon: Network,
-      title: "Institutional Strengthening",
-      description: "Building capacity of rural institutions and cooperatives for effective community-based development programs."
+      icon: Target,
+      title: "CCIM Program (12 weeks)",
+      description: "Certificate Course on Insecticides Management providing 40-hour training on safe selection, application, and handling of insecticides."
     },
     {
-      icon: Lightbulb,
-      title: "Innovation Transfer",
-      description: "Training on technology transfer methods and adoption of innovative agricultural practices in rural communities."
+      icon: Award,
+      title: "Professional Certification",
+      description: "Participants receive diplomas and certificates recognizing their expertise in agricultural extension services and insecticides management."
     },
     {
       icon: HandHeart,
-      title: "Community Mobilization",
-      description: "Developing skills for community organization, participatory development, and grassroots leadership building."
+      title: "Community Impact",
+      description: "Creating trusted advisors who contribute to sustainable agricultural practices and enhanced food safety in farming communities."
     }
   ],
   stats: [
     {
-      label: "Extension Workers Trained",
-      value: "300+",
-      icon: Users
-    },
-    {
-      label: "Institutions Strengthened",
-      value: "45+",
-      icon: Building
-    },
-    {
-      label: "Training Modules",
-      value: "12+",
+      label: "DAESI Trainees",
+      value: "250",
       icon: GraduationCap
     },
     {
-      label: "Communities Reached",
-      value: "150+",
-      icon: Network
+      label: "CCIM Trainees",
+      value: "250",
+      icon: Target
+    },
+    {
+      label: "Total Professionals",
+      value: "500",
+      icon: Users
+    },
+    {
+      label: "Program Duration",
+      value: "2020-2025",
+      icon: Award
     }
   ],
   gallery: [
     {
-      src: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop",
-      alt: "DAESI training session in progress",
-      caption: "Agricultural extension training session for field workers"
+      src: "/images/activities/daesi-ccim/01.jpg",
+      alt: "DAESI program training session",
+      caption: "DAESI 48-week comprehensive training program for input dealers"
     },
     {
-      src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&h=600&fit=crop",
-      alt: "Community mobilization workshop",
-      caption: "Community mobilization and leadership development workshop"
+      src: "/images/activities/daesi-ccim/02.JPG",
+      alt: "CCIM insecticides management course",
+      caption: "CCIM 12-week certificate course on insecticides management"
     },
     {
-      src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      alt: "Institutional capacity building session",
-      caption: "Institutional capacity building for rural cooperatives"
+      src: "/images/activities/daesi-ccim/03.JPG",
+      alt: "Professional development training",
+      caption: "Professional development and certification programs"
     },
     {
-      src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop",
-      alt: "Group discussion and planning",
-      caption: "Participatory planning and group discussion sessions"
+      src: "/images/activities/daesi-ccim/WhatsApp Image 2025-09-17 at 11.44.54 AM.jpeg",
+      alt: "DAESI classroom training",
+      caption: "40 days intensive classroom training covering agricultural practices"
     },
     {
-      src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop",
-      alt: "Field visit and practical training",
-      caption: "Field visits for practical application of extension methods"
+      src: "/images/activities/daesi-ccim/WhatsApp Image 2025-09-17 at 11.44.55 AM.jpeg",
+      alt: "CCIM practical training",
+      caption: "Hands-on CCIM training for safe insecticides handling"
     },
     {
-      src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
-      alt: "Certificate distribution ceremony",
-      caption: "Recognition and certification of trained extension workers"
+      src: "/images/activities/daesi-ccim/01 copy.JPG",
+      alt: "Agricultural extension services training",
+      caption: "Training on modern agricultural extension methodologies"
+    },
+    {
+      src: "/images/activities/daesi-ccim/02 copy.JPG",
+      alt: "Sustainable agriculture practices",
+      caption: "Promoting sustainable agriculture and food safety practices"
     }
   ],
   content: {
-    overview: "The DAESI (Development of Agriculture Extension Services in India) and CCIM (Cooperative and Community Institution Management) programs are strategic initiatives designed to strengthen agricultural extension services and rural institutional capacity. These comprehensive training programs focus on building the skills and knowledge of extension workers, cooperative leaders, and community institutions to effectively serve rural populations and promote sustainable agricultural development.",
+    overview: "The D.A.E.S.I (Diploma in Agricultural Extension Services for Input Dealers) and C.C.I.M (Certificate Course on Insecticides Management) programs are sponsored by the National Institute of Agricultural Extension Management (MANAGE), Hyderabad. These comprehensive training initiatives are designed to enhance professional development and promote sustainable agricultural practices in District Hingoli.",
     objectives: [
-      "Enhance the capacity of agricultural extension workers in modern extension methodologies",
-      "Strengthen rural institutions and cooperatives for effective community development",
-      "Develop leadership skills among community members and institutional representatives",
-      "Promote participatory approaches to rural development and technology transfer",
-      "Build sustainable networks for knowledge sharing and collaborative development"
+      "Enhance Professional Development: Empower input dealers to contribute to sustainable agricultural practices",
+      "Improve Advisory Services: Enable input dealers to provide informed advice on agricultural inputs",
+      "Support Sustainable Agriculture: Promote environmentally friendly farming practices",
+      "Develop practical skills: Provide hands-on training on safe selection, application, and handling of insecticides",
+      "Create trusted advisors: Build a network of knowledgeable dealers for expert guidance to farmers"
     ],
-    methodology: "Our training methodology combines classroom instruction with hands-on field experience, case study analysis, and peer learning. Programs include modules on extension communication, participatory rural appraisal, project management, financial management for cooperatives, and community mobilization techniques. We use interactive teaching methods, group exercises, and real-world problem-solving approaches to ensure practical skill development.",
-    impact: "Over 300 extension workers have been trained through our DAESI and CCIM programs, significantly improving the quality of agricultural extension services in the region. 45 rural institutions have been strengthened, leading to better governance and service delivery. The trained extension workers now serve over 150 communities, with improved farmer adoption rates of new technologies increasing by 50%. The program has also created a network of trained professionals who continue to mentor and support each other in their development work."
+    methodology: "DAESI Program: 48-week comprehensive training with 40 days classroom training covering modern agricultural practices, pest management, input selection, soil health, crop production, and sustainable farming techniques, plus 8 exposure visits to farms and research centers. CCIM Program: 12-week course providing 40-hour Input Dealer Training Program focusing on insecticides management, safety protocols, and best practices.",
+    impact: "From 2020 to 2025, both programs have trained 250 participants each in District Hingoli, totaling 500 professionals. Upon completion, participants receive diplomas and certificates recognizing their expertise, enabling them to become trusted advisors in their communities and contribute to sustainable agricultural practices and enhanced food safety.",
+    trainingData: {
+      title: "Training Programs Statistics (2020-2025)",
+      description: "Comprehensive data showing the reach and impact of DAESI and CCIM training programs in District Hingoli.",
+      headers: ["Faculty", "Region", "Trainees"],
+      rows: [
+        ["DAESI", "District Hingoli", "250"],
+        ["CCIM", "District Hingoli", "250"]
+      ],
+      total: 500
+    },
+    highlights: [
+      "DAESI Program includes 8 hands-on exposure visits at farms, research centers, and agricultural organizations",
+      "CCIM creates a network of knowledgeable dealers providing expert guidance to farmers and agricultural professionals",
+      "Both programs aim to achieve dual impact: enhancing professional growth and promoting farming community safety",
+      "Certification enhances professional development, enabling better service to the farming community"
+    ]
   }
 };
 

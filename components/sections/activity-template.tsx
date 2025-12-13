@@ -55,6 +55,14 @@ interface ActivityTemplateProps {
     objectives: string[];
     impact: string;
     methodology?: string;
+    trainingData?: {
+      title: string;
+      description: string;
+      headers: string[];
+      rows: (string | number)[][];
+      total: number;
+    };
+    highlights?: string[];
   };
 }
 
@@ -280,6 +288,80 @@ export function ActivityTemplate({
                     {content.impact}
                   </p>
                 </div>
+
+                {/* Training Data Table */}
+                {content.trainingData && (
+                  <div>
+                    <h3 className="font-heading font-bold text-2xl text-gray-900 dark:text-white mb-4">
+                      {content.trainingData.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                      {content.trainingData.description}
+                    </p>
+                    
+                    {/* Table */}
+                    <div className="overflow-x-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                      <table className="w-full">
+                        <thead>
+                          <tr className="bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+                            {content.trainingData.headers.map((header, index) => (
+                              <th key={index} className="px-6 py-4 text-left font-semibold text-sm uppercase tracking-wider">
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                          {content.trainingData.rows.map((row, index) => (
+                            <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                              {row.map((cell, cellIndex) => (
+                                <td key={cellIndex} className="px-6 py-4 text-gray-900 dark:text-gray-100">
+                                  {cellIndex === 2 ? (
+                                    <span className="font-semibold text-orange-600 dark:text-orange-400">
+                                      {cell}
+                                    </span>
+                                  ) : (
+                                    cell
+                                  )}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                          <tr className="bg-orange-50 dark:bg-orange-900/20 font-semibold">
+                            <td className="px-6 py-4 text-gray-900 dark:text-gray-100 font-bold">
+                              Total
+                            </td>
+                            <td className="px-6 py-4 text-gray-900 dark:text-gray-100">
+                              All Talukas
+                            </td>
+                            <td className="px-6 py-4 text-orange-600 dark:text-orange-400 font-bold text-lg">
+                              {content.trainingData.total}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
+
+                {/* Program Highlights */}
+                {content.highlights && (
+                  <div>
+                    <h3 className="font-heading font-bold text-2xl text-gray-900 dark:text-white mb-4">
+                      Project Highlights
+                    </h3>
+                    <div className="space-y-3">
+                      {content.highlights.map((highlight, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            {highlight}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </motion.div>
 
               {/* Features */}
@@ -293,7 +375,7 @@ export function ActivityTemplate({
                 <h3 className="font-heading font-bold text-2xl text-gray-900 dark:text-white mb-6">
                   Key Features
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-2">
                   {features.map((feature, index) => {
                     const Icon = feature.icon;
                     return (
@@ -307,16 +389,16 @@ export function ActivityTemplate({
                         className="group"
                       >
                         <Card className="border-2 border-gray-100 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-300 hover:shadow-lg">
-                          <CardContent className="p-4 sm:p-6">
-                            <div className="flex items-start gap-3 sm:gap-4">
-                              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600 dark:text-primary-400" />
+                          <CardContent className="p-2 sm:p-3">
+                            <div className="flex items-start gap-1.5 sm:gap-2">
+                              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600 dark:text-primary-400" />
                               </div>
                               <div>
-                                <h4 className="font-semibold text-base sm:text-lg text-gray-900 dark:text-white mb-2">
+                                <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white">
                                   {feature.title}
                                 </h4>
-                                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                  <p className="text-gray-600 dark:text-gray-300 text-xs leading-relaxed">
                                   {feature.description}
                                 </p>
                               </div>
@@ -401,7 +483,7 @@ export function ActivityTemplate({
               <>
                 <Button
                   variant="outline"
-                  size="icon"
+                  size="sm"
                   onClick={prevGallerySlide}
                   className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/95 hover:bg-white border-none shadow-xl backdrop-blur-sm transition-all duration-300 hover:scale-110"
                 >
@@ -409,7 +491,7 @@ export function ActivityTemplate({
                 </Button>
                 <Button
                   variant="outline"
-                  size="icon"
+                  size="sm"
                   onClick={nextGallerySlide}
                   className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/95 hover:bg-white border-none shadow-xl backdrop-blur-sm transition-all duration-300 hover:scale-110"
                 >
@@ -454,9 +536,10 @@ export function ActivityTemplate({
             <Button
               variant="outline"
               onClick={closeGallery}
-              className="absolute top-4 sm:top-6 right-4 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-black/70 hover:bg-black/90 border-white/30 text-white backdrop-blur-md rounded-full transition-all duration-300 hover:scale-110 z-50 shadow-2xl"
+              className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/20 hover:bg-white/30 border-2 border-white/50 text-white backdrop-blur-xl rounded-full transition-all duration-300 hover:scale-110 z-50 shadow-2xl ring-2 ring-white/20 hover:ring-white/40"
+              style={{ backdropFilter: 'blur(20px)' }}
             >
-              <X className="w-6 h-6 sm:w-7 sm:h-7 stroke-2" />
+              <X className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 stroke-[3] drop-shadow-lg" />
             </Button>
 
             {/* Modern Navigation */}
@@ -465,30 +548,32 @@ export function ActivityTemplate({
                 <Button
                   variant="outline"
                   onClick={prevImage}
-                  className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-black/70 hover:bg-black/90 border-white/30 text-white backdrop-blur-md rounded-full transition-all duration-300 hover:scale-110 z-50 shadow-2xl"
+                  className="absolute left-3 sm:left-4 lg:left-6 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/20 hover:bg-white/30 border-2 border-white/50 text-white backdrop-blur-xl rounded-full transition-all duration-300 hover:scale-110 z-50 shadow-2xl ring-2 ring-white/20 hover:ring-white/40"
+                  style={{ backdropFilter: 'blur(20px)' }}
                 >
-                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-2" />
+                  <ChevronLeft className="w-5 h-5 sm:w-7 sm:h-7 lg:w-9 lg:h-9 stroke-[3] drop-shadow-lg" />
                 </Button>
                 <Button
                   variant="outline"
                   onClick={nextImage}
-                  className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-black/70 hover:bg-black/90 border-white/30 text-white backdrop-blur-md rounded-full transition-all duration-300 hover:scale-110 z-50 shadow-2xl"
+                  className="absolute right-3 sm:right-4 lg:right-6 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/20 hover:bg-white/30 border-2 border-white/50 text-white backdrop-blur-xl rounded-full transition-all duration-300 hover:scale-110 z-50 shadow-2xl ring-2 ring-white/20 hover:ring-white/40"
+                  style={{ backdropFilter: 'blur(20px)' }}
                 >
-                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-2" />
+                  <ChevronRight className="w-5 h-5 sm:w-7 sm:h-7 lg:w-9 lg:h-9 stroke-[3] drop-shadow-lg" />
                 </Button>
               </>
             )}
 
             {/* Modern Image Caption */}
             {gallery[selectedImage].caption && (
-              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-black/60 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/10">
-                <p className="text-white text-center text-sm sm:text-base leading-relaxed">{gallery[selectedImage].caption}</p>
+              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-black/70 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border-2 border-white/20 shadow-2xl">
+                <p className="text-white text-center text-sm sm:text-base leading-relaxed font-medium drop-shadow-lg">{gallery[selectedImage].caption}</p>
               </div>
             )}
 
             {/* Modern Image Counter */}
-            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 bg-black/60 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
-              <span className="text-white text-sm sm:text-base font-medium">
+            <div className="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6 bg-white/20 backdrop-blur-xl rounded-full px-3 py-1 sm:px-4 sm:py-2 border-2 border-white/30 shadow-2xl ring-2 ring-white/10">
+              <span className="text-white text-xs sm:text-sm lg:text-base font-bold drop-shadow-lg">
                 {selectedImage + 1} / {gallery.length}
               </span>
             </div>

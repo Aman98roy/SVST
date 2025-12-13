@@ -4,50 +4,50 @@ import { ActivityTemplate } from "@/components/sections/activity-template";
 import { Shield, Heart, Package, Users, Stethoscope, Utensils, Target, Award } from "lucide-react";
 
 const activityData = {
-  title: "COVID-19 Relief Activities",
-  subtitle: "Standing Together in Crisis",
-  description: "Comprehensive emergency response and relief activities during the COVID-19 pandemic, providing essential supplies, healthcare support, and community assistance to vulnerable populations during unprecedented challenges.",
-  mainImage: "https://images.unsplash.com/photo-1584118624012-df056829fbd0?w=1200&h=600&fit=crop",
+  title: "Covid-19 Relief Activities",
+  subtitle: "Standing Together in Crisis - Supporting Communities During the Pandemic",
+  description: "The year 2019 was devastating for everyone throughout the world, the outbreak of Covid19 snatched millions of smiles, especially the people who were already struggling to even go through each day. We initiated effective measures where our government was unable to, distributing masks, sanitizers, arranging hospital beds and ambulance services for emergency cases.",
+  mainImage: "/images/activities/covid-19/hero-image.jpeg",
   category: "Emergency Relief",
-  location: "Hingoli District & Beyond",
-  duration: "March 2020 - December 2022",
-  beneficiaries: "15,000+ Individuals",
+  location: "Rural and Urban Sectors",
+  duration: "2020 - Ongoing",
+  beneficiaries: "Thousands of Families",
   features: [
     {
-      icon: Package,
-      title: "Essential Supplies",
-      description: "Distribution of food packets, sanitizers, masks, and basic necessities to families in need during lockdown periods."
+      icon: Shield,
+      title: "Mask Distribution Program",
+      description: "Organized special mask distribution program providing hygienic masks to localities and explaining their significance for virus control."
     },
     {
-      icon: Stethoscope,
-      title: "Healthcare Support",
-      description: "Medical assistance, oxygen support, and coordination with healthcare facilities for COVID-19 patients and their families."
+      icon: Package,
+      title: "Sanitizer Distribution Program",
+      description: "Distributed thousands of sanitizers in different rural and urban sectors, helping families below poverty line who couldn't afford sanitizers."
     },
     {
       icon: Utensils,
-      title: "Community Kitchens",
-      description: "Establishment of community kitchens to provide free meals to migrant workers, daily laborers, and homeless individuals."
+      title: "Food Distribution Program",
+      description: "Distributed dry rations to different villages helping families prepare survival meals during economic downfall and lockdown situations."
     },
     {
-      icon: Shield,
-      title: "Awareness Campaigns",
-      description: "Public health awareness programs on COVID-19 prevention, vaccination drives, and mental health support initiatives."
+      icon: Stethoscope,
+      title: "Healthcare & Emergency Services",
+      description: "Arranged hospital beds, ambulance services for emergency cases, and distributed necessary medicines in remote villages."
     }
   ],
   stats: [
     {
-      label: "People Served",
-      value: "15,000+",
+      label: "Families Helped",
+      value: "Innumerable",
       icon: Users
     },
     {
-      label: "Food Packets Distributed",
-      value: "25,000+",
-      icon: Package
+      label: "Masks Distributed",
+      value: "Thousands",
+      icon: Shield
     },
     {
-      label: "Medical Assistance Cases",
-      value: "500+",
+      label: "Sanitizers Given",
+      value: "1000+",
       icon: Stethoscope
     },
     {
@@ -58,47 +58,36 @@ const activityData = {
   ],
   gallery: [
     {
-      src: "https://images.unsplash.com/photo-1584118624012-df056829fbd0?w=800&h=600&fit=crop",
-      alt: "COVID-19 relief distribution",
-      caption: "Distribution of essential supplies and food packets"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=800&h=600&fit=crop",
-      alt: "Healthcare workers in protective gear",
-      caption: "Healthcare support and medical assistance activities"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&h=600&fit=crop",
-      alt: "Community kitchen operations",
-      caption: "Community kitchen providing free meals to those in need"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1584483766114-2cea6facdf57?w=800&h=600&fit=crop",
-      alt: "Sanitization drive in community",
-      caption: "Community sanitization and hygiene awareness programs"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=800&h=600&fit=crop",
-      alt: "Mask distribution campaign",
-      caption: "Mask and sanitizer distribution to rural communities"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1605289982774-9a6fef564df8?w=800&h=600&fit=crop",
-      alt: "Vaccination awareness campaign",
-      caption: "COVID-19 vaccination awareness and support programs"
+      src: "/images/activities/covid-19/WhatsApp-Image-2023-04-13-at-9.57.26-AM.jpeg",
+      alt: "COVID-19 relief distribution activities",
+      caption: "SVST team distributing masks, sanitizers and essential supplies during COVID-19 pandemic"
     }
   ],
   content: {
-    overview: "The COVID-19 Relief Activities represent SVST's rapid and comprehensive response to the unprecedented challenges posed by the global pandemic. Recognizing the disproportionate impact on rural and marginalized communities, we mobilized resources and volunteers to provide immediate relief, healthcare support, and long-term assistance. Our multi-faceted approach addressed both immediate survival needs and broader public health concerns during the crisis.",
+    overview: "The year 2019 was devastating for everyone throughout the world, the outbreak of Covid19 snatched millions of smiles, especially the people who were already struggling to even go through each day. Uncountable deaths and sufferings, tears we can't ever compensate for with anything, to what they lost are irreversible and heartbreaking. Keeping all these in mind, we initiated effective measures where our government was unable to, and so we distributed masks, and sanitizers, and arranged hospital beds and ambulance services for emergency cases.",
     objectives: [
-      "Provide immediate relief in the form of food, shelter, and essential supplies to affected families",
-      "Support healthcare infrastructure and provide medical assistance to COVID-19 patients",
-      "Ensure food security for vulnerable populations including migrant workers and daily laborers",
-      "Conduct public health awareness campaigns to prevent the spread of COVID-19",
-      "Coordinate with government agencies and other organizations for effective relief distribution"
+      "Distribute masks and sanitizers to control the proliferated virus",
+      "Arrange hospital beds and ambulance services for emergency cases",
+      "Distribute dry rations and necessary medicines in different remote villages",
+      "Organize awareness camps to educate citizens about the virus",
+      "Generate employment opportunities and discard rumors about the outbreak"
     ],
-    methodology: "Our response strategy combined immediate relief distribution with systematic healthcare support and awareness campaigns. We established distribution centers across multiple locations, coordinated with local authorities for beneficiary identification, and maintained strict safety protocols during all activities. Volunteer teams were trained in COVID-19 safety measures, and partnerships with healthcare providers ensured medical support reached those in need.",
-    impact: "Our COVID-19 relief efforts reached over 15,000 individuals across Hingoli district and neighboring areas. We distributed 25,000+ food packets, provided medical assistance to 500+ patients, and conducted awareness programs for 3,000+ community members. The community kitchens served over 50,000 meals during peak lockdown periods. Our efforts were recognized by district authorities and helped bridge critical gaps in government relief efforts, particularly in remote rural areas where access to relief was limited."
+    methodology: "We organized special programs for mask distribution where we gave hygienic masks to the localities and explained their significance. Our Sanitizer Distribution Program helped thousands of families below the poverty line who couldn't afford sanitizers. We distributed dry rations to different villages so families were able to prepare their survival meals during the economic downfall.",
+    impact: "With our best possible efforts, we were successful in helping innumerable families. We distributed more than thousands of sanitizers in different rural and urban sectors. Our food distribution program helped families during lockdown situations when people died of hunger other than the infection. We organized awareness camps to educate our citizens and generate employment opportunities.",
+    programs: {
+      maskDistribution: {
+        title: "Mask Distribution Program",
+        description: "The covid19 outbreak made it mandatory to wear masks and maintain social distancing to control the proliferated virus. Due to negligence and irresponsible attitude, the consequences escalated to an extent that the whole country got affected. We couldn't ignore the facts and took the initiative to help as many people as possible. We organized a special mask distribution program, where we gave hygienic masks to the localities and explained the significance of it."
+      },
+      sanitizerDistribution: {
+        title: "Sanitizer Distribution Program",
+        description: "As we all know that coronavirus is transmittable and it spreads really fast even with the slightest touch of an infected person so just putting on a mask or maintaining distance isn't enough, we must sanitize our hands and the commodities we buy, from time to time. In a country like India, where unemployment, financial debts, and illiteracy have touched the skies, there are numerous families, below the poverty line, who can't afford to have sanitizer. To help such people we started our own Sanitizer Distribution Program. We distributed more than thousands of sanitizers in different rural and urban sectors."
+      },
+      foodDistribution: {
+        title: "Food Distribution Program",
+        description: "The economic downfall due to lockdown situations was clearly visible and we can't deny the suffering. People died of hunger other than the infection and it affected us unimaginably, the tears, and the outcries were undeniably real and it is heartbreaking to even imagine what they would have felt. With heavy hearts, our team members couldn't resist offering help to those poor innocents. We distributed dry rations to different villages so they were able to at least prepare their survival meal."
+      }
+    }
   }
 };
 
