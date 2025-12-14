@@ -7,7 +7,7 @@ export default function WorkersDayClient() {
     title: "International Workers' Day",
     subtitle: "Honoring the Dignity of Labor",
     description: "Swami Vivekanand Seva Trust, Hingoli, celebrated May Day (International Workers' Day) on 1st May 2024 with great respect and acknowledgment of the contributions of workers, especially focusing on the empowerment of skilled youth and laborers.",
-    mainImage: "/images/Events/WorkersDay/hero-image.jpg",
+    mainImage: "/images/Events/International-worker-day/0-5-980x613.jpg",
     eventDate: "May 1, 2024",
     location: "SVST Campus, Narsi Namdev, Hingoli",
     duration: "Full Day Celebration", 
@@ -62,34 +62,9 @@ export default function WorkersDayClient() {
 
     gallery: [
       {
-        src: "/images/Events/WorkersDay/hero-image.jpg",
+        src: "/images/Events/International-worker-day/0-5-980x613.jpg",
         alt: "International Workers Day Celebration",
         caption: "Community gathering for Workers Day celebration at SVST campus"
-      },
-      {
-        src: "/images/Events/WorkersDay/speech-ceremony.jpg",
-        alt: "Welcome Speech Ceremony", 
-        caption: "Trust Secretary addressing workers about dignity of labor and rights"
-      },
-      {
-        src: "/images/Events/WorkersDay/skill-performances.jpg",
-        alt: "Motivational Performances",
-        caption: "Trainees performing skits about worker empowerment and skill development"
-      },
-      {
-        src: "/images/Events/WorkersDay/tree-plantation.jpg",
-        alt: "Tree Plantation Activity",
-        caption: "Symbolic tree plantation for sustainable development and growth"
-      },
-      {
-        src: "/images/Events/WorkersDay/recognition-ceremony.jpg",
-        alt: "Workers Recognition Ceremony",
-        caption: "Distributing certificates to dedicated workers and outstanding trainees"
-      },
-      {
-        src: "/images/Events/WorkersDay/community-interaction.jpg",
-        alt: "Community Interaction Session",
-        caption: "Interactive session with local workers sharing experiences and aspirations"
       }
     ],
 

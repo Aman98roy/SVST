@@ -14,8 +14,7 @@ import {
   ZoomIn, 
   Search,
   X,
-  ChevronLeft,
-  ChevronRight,
+  ArrowLeft,
   Camera,
   Calendar,
   MapPin,
@@ -28,174 +27,255 @@ import {
 
 // Enhanced gallery images with comprehensive metadata
 const galleryImages = [
+  // Independence Day Events
   { 
     id: 1, 
-    src: "/images/ddu-gky/training-session.jpg", 
-    alt: "Skills Training Session in Progress", 
-    category: "Training", 
-    subcategory: "DDU-GKY",
-    description: "Youth empowerment through comprehensive skills training program", 
-    location: "SVST Training Center, Hingoli",
-    date: "2024-08-15",
-    photographer: "SVST Team",
-    tags: ["skills", "training", "youth", "empowerment"],
-    likes: 45,
-    views: 234
+    src: "/images/Events/Independance day/hero-image.png", 
+    alt: "Independence Day Flag Hoisting", 
+    category: "Events", 
+    subcategory: "Independence Day",
+    description: "Patriotic celebration and flag hoisting ceremony with community participation", 
+    location: "SVST Main Campus",
+    date: "August 15, 2024",
+    photographer: "Event Documentation Team",
+    tags: ["independence", "patriotic", "flag", "national"],
+    likes: 92,
+    views: 623
   },
   { 
     id: 2, 
-    src: "/images/ddu-gky/certification-ceremony.jpg", 
-    alt: "Graduation and Certification Ceremony", 
+    src: "/images/Events/Independance day/WhatsApp Image 2025-08-15 at 8.33.02 AM.png", 
+    alt: "Independence Day Cultural Program", 
     category: "Events", 
-    subcategory: "Ceremonies",
-    description: "Certificate distribution to successful DDU-GKY candidates", 
-    location: "SVST Campus, Sukli",
-    date: "2024-09-20",
-    photographer: "Event Photography Team",
-    tags: ["graduation", "certificate", "achievement", "success"],
-    likes: 67,
+    subcategory: "Independence Day",
+    description: "Cultural performances and patriotic activities during Independence Day celebration", 
+    location: "SVST Campus",
+    date: "August 15, 2024",
+    photographer: "Cultural Team",
+    tags: ["independence", "cultural", "patriotic", "celebration"],
+    likes: 78,
     views: 456
   },
   { 
     id: 3, 
-    src: "/images/activities/community-outreach.jpg", 
-    alt: "Community Outreach Program", 
-    category: "Activities", 
-    subcategory: "Community Engagement",
-    description: "Reaching out to rural communities for development awareness", 
-    location: "Rural Villages, Maharashtra",
-    date: "2024-07-10",
-    photographer: "Field Team",
-    tags: ["community", "outreach", "rural", "awareness"],
-    likes: 32,
-    views: 189
+    src: "/images/Events/Independance day/WhatsApp Image 2025-08-15 at 8.33.11 AM.png", 
+    alt: "Independence Day Community Gathering", 
+    category: "Events", 
+    subcategory: "Independence Day",
+    description: "Community participation in Independence Day celebrations and awareness programs", 
+    location: "SVST Campus",
+    date: "August 15, 2024",
+    photographer: "Community Team",
+    tags: ["independence", "community", "gathering", "awareness"],
+    likes: 65,
+    views: 389
   },
+  // Republic Day Events
   { 
     id: 4, 
-    src: "/images/events/cultural-program.jpg", 
-    alt: "Cultural Heritage Celebration", 
+    src: "/images/Events/RepublicDay/hero-image.jpg", 
+    alt: "Republic Day Flag Ceremony", 
+    category: "Events", 
+    subcategory: "Republic Day",
+    description: "Republic Day celebration with flag hoisting and constitutional awareness programs", 
+    location: "SVST Campus",
+    date: "January 26, 2024",
+    photographer: "Event Team",
+    tags: ["republic", "constitution", "flag", "ceremony"],
+    likes: 87,
+    views: 534
+  },
+  { 
+    id: 5, 
+    src: "/images/Events/RepublicDay/WhatsApp Image 2025-09-12 at 12.34.43 PM.jpeg", 
+    alt: "Republic Day Cultural Events", 
+    category: "Events", 
+    subcategory: "Republic Day",
+    description: "Cultural performances and civic awareness activities during Republic Day", 
+    location: "SVST Campus",
+    date: "January 26, 2024",
+    photographer: "Cultural Team",
+    tags: ["republic", "cultural", "civic", "awareness"],
+    likes: 73,
+    views: 467
+  },
+  // International Workers Day
+  { 
+    id: 6, 
+    src: "/images/Events/International-worker-day/0-5-980x613.jpg", 
+    alt: "International Workers Day Program", 
+    category: "Events", 
+    subcategory: "Workers Day",
+    description: "Celebrating the contributions of workers and promoting labor rights awareness", 
+    location: "SVST Campus",
+    date: "May 1, 2024",
+    photographer: "Labor Affairs Team",
+    tags: ["workers", "labor", "rights", "celebration"],
+    likes: 56,
+    views: 342
+  },
+  // Yoga Day Events
+  { 
+    id: 7, 
+    src: "/images/Events/YogaDay/1.jpeg", 
+    alt: "International Yoga Day Practice", 
+    category: "Events", 
+    subcategory: "Yoga Day",
+    description: "Community yoga sessions promoting health and wellness awareness", 
+    location: "SVST Campus",
+    date: "June 21, 2024",
+    photographer: "Wellness Team",
+    tags: ["yoga", "wellness", "health", "meditation"],
+    likes: 94,
+    views: 678
+  },
+  { 
+    id: 8, 
+    src: "/images/Events/YogaDay/main.jpeg", 
+    alt: "Yoga Day Wellness Program", 
+    category: "Events", 
+    subcategory: "Yoga Day",
+    description: "Group yoga activities and meditation sessions for community wellness", 
+    location: "SVST Campus",
+    date: "June 21, 2024",
+    photographer: "Wellness Team",
+    tags: ["yoga", "group", "meditation", "wellness"],
+    likes: 82,
+    views: 543
+  },
+  // Cultural Programs
+  { 
+    id: 9, 
+    src: "/images/Events/Cultural programs/hero-image.jpeg", 
+    alt: "Traditional Cultural Performance", 
     category: "Events", 
     subcategory: "Cultural Programs",
-    description: "Celebrating Maharashtra's rich cultural diversity and heritage", 
-    location: "SVST Cultural Center",
-    date: "2024-08-25",
+    description: "Traditional folk performances showcasing Maharashtra's rich cultural heritage", 
+    location: "Training Center, Nimbala Makta",
+    date: "2024",
     photographer: "Cultural Documentation Team",
-    tags: ["culture", "heritage", "celebration", "maharashtra"],
+    tags: ["culture", "heritage", "traditional", "maharashtra"],
+    likes: 108,
+    views: 765
+  },
+  { 
+    id: 10, 
+    src: "/images/Events/Cultural programs/10.jpeg", 
+    alt: "Community Cultural Event", 
+    category: "Events", 
+    subcategory: "Cultural Programs",
+    description: "Cultural competitions and traditional art performances by local youth", 
+    location: "Training Center, Nimbala Makta",
+    date: "2024",
+    photographer: "Youth Development Team",
+    tags: ["culture", "youth", "competition", "art"],
     likes: 89,
     views: 567
   },
   { 
-    id: 5, 
-    src: "/images/ddu-gky/medical-training.jpg", 
-    alt: "Medical Equipment Assistant Training", 
-    category: "Training", 
-    subcategory: "Healthcare",
-    description: "Specialized training in medical equipment operation and maintenance", 
-    location: "Medical Training Lab, SVST",
-    date: "2024-09-05",
-    photographer: "Training Division",
-    tags: ["medical", "healthcare", "equipment", "training"],
-    likes: 54,
-    views: 298
-  },
-  { 
-    id: 6, 
-    src: "/images/events/republic-day.jpg", 
-    alt: "Republic Day Celebration", 
-    category: "Events", 
-    subcategory: "National Events",
-    description: "Patriotic celebration with community participation and flag hoisting", 
-    location: "SVST Campus Ground",
-    date: "2024-01-26",
-    photographer: "Event Team",
-    tags: ["republic day", "patriotic", "national", "celebration"],
-    likes: 123,
-    views: 789
-  },
-  { 
-    id: 7, 
-    src: "/images/ddu-gky/practical-demonstration.jpg", 
-    alt: "CCTV Supervisor Training Demo", 
-    category: "Training", 
-    subcategory: "Technical Skills",
-    description: "Hands-on technical training for CCTV supervision and maintenance", 
-    location: "Technical Lab, SVST",
-    date: "2024-08-30",
-    photographer: "Technical Team",
-    tags: ["cctv", "technical", "supervision", "security"],
-    likes: 76,
-    views: 345
-  },
-  { 
-    id: 8, 
-    src: "/images/events/yoga-day.jpg", 
-    alt: "International Yoga Day Celebration", 
-    category: "Events", 
-    subcategory: "Wellness Programs",
-    description: "Promoting health and wellness through yoga and meditation", 
-    location: "Open Ground, SVST Campus",
-    date: "2024-06-21",
-    photographer: "Wellness Team",
-    tags: ["yoga", "wellness", "health", "meditation"],
-    likes: 98,
-    views: 456
-  },
-  { 
-    id: 9, 
-    src: "/images/activities/farmers-training.jpg", 
-    alt: "Sustainable Farming Training", 
-    category: "Activities", 
-    subcategory: "Agriculture",
-    description: "Agricultural training focused on sustainable and organic farming practices", 
-    location: "Demo Farm, Rural Maharashtra",
-    date: "2024-07-15",
-    photographer: "Agricultural Team",
-    tags: ["farming", "agriculture", "sustainable", "organic"],
-    likes: 65,
-    views: 321
-  },
-  { 
-    id: 10, 
-    src: "/images/activities/women-empowerment.jpg", 
-    alt: "Women Empowerment Workshop", 
-    category: "Activities", 
-    subcategory: "Women's Development",
-    description: "Empowering women through skill development and self-help group formation", 
-    location: "Women's Training Center",
-    date: "2024-08-08",
-    photographer: "Women's Development Team",
-    tags: ["women", "empowerment", "skills", "self-help"],
-    likes: 87,
-    views: 432
-  },
-  { 
     id: 11, 
-    src: "/images/events/workers-day.jpg", 
-    alt: "International Workers' Day Celebration", 
+    src: "/images/Events/Cultural programs/12.jpeg", 
+    alt: "Cultural Heritage Festival", 
     category: "Events", 
-    subcategory: "Labor Recognition",
-    description: "Honoring the dignity of labor and celebrating skilled workforce", 
-    location: "SVST Assembly Hall",
-    date: "2024-05-01",
-    photographer: "Labor Affairs Team",
-    tags: ["workers", "labor", "dignity", "celebration"],
-    likes: 43,
-    views: 287
+    subcategory: "Cultural Programs",
+    description: "Celebrating Maharashtra's cultural traditions through music, dance, and drama", 
+    location: "Training Center, Nimbala Makta",
+    date: "2024",
+    photographer: "Cultural Team",
+    tags: ["heritage", "music", "dance", "drama"],
+    likes: 95,
+    views: 634
   },
+  // Activities - Farmers Training
   { 
     id: 12, 
-    src: "/images/activities/organic-farming.jpg", 
-    alt: "Organic Farming Practices", 
+    src: "/images/activities/farmers-training.jpg", 
+    alt: "Agricultural Training Program", 
     category: "Activities", 
-    subcategory: "Sustainable Agriculture",
-    description: "Training in eco-friendly and sustainable agriculture methods", 
-    location: "Organic Demo Plot, SVST",
-    date: "2024-09-10",
+    subcategory: "Farmers Training",
+    description: "Comprehensive training programs for farmers on modern agricultural techniques", 
+    location: "Rural Training Centers",
+    date: "2024",
+    photographer: "Agricultural Extension Team",
+    tags: ["farming", "agriculture", "technology", "training"],
+    likes: 67,
+    views: 423
+  },
+  { 
+    id: 13, 
+    src: "/images/activities/organic-farming.jpg", 
+    alt: "Organic Farming Workshop", 
+    category: "Activities", 
+    subcategory: "Farmers Training",
+    description: "Training farmers in sustainable organic farming methods and practices", 
+    location: "Organic Demonstration Farm",
+    date: "2024",
     photographer: "Sustainability Team",
     tags: ["organic", "sustainable", "eco-friendly", "agriculture"],
     likes: 72,
     views: 398
+  },
+  // Activities - Skill Development
+  { 
+    id: 14, 
+    src: "/images/activities/skill-development.jpg", 
+    alt: "Vocational Skills Training", 
+    category: "Activities", 
+    subcategory: "Skill Development",
+    description: "Comprehensive skill development programs for employment generation", 
+    location: "Skills Development Center",
+    date: "2024",
+    photographer: "Professional Training Team",
+    tags: ["skills", "development", "professional", "career"],
+    likes: 76,
+    views: 445
+  },
+  // Activities - Women Empowerment
+  { 
+    id: 15, 
+    src: "/images/activities/women-empowerment.jpg", 
+    alt: "Women's Skill Development", 
+    category: "Activities", 
+    subcategory: "Women Empowerment",
+    description: "Empowering women through skill development and entrepreneurship training", 
+    location: "Women's Training Center",
+    date: "2024",
+    photographer: "Women's Development Team",
+    tags: ["women", "empowerment", "skills", "entrepreneurship"],
+    likes: 87,
+    views: 432
+  },
+  // Activities - Community Outreach
+  { 
+    id: 16, 
+    src: "/images/activities/community-outreach.jpg", 
+    alt: "Community Service Program", 
+    category: "Activities", 
+    subcategory: "Community Outreach",
+    description: "Community outreach programs for social development and awareness", 
+    location: "Rural Communities",
+    date: "2024",
+    photographer: "Field Team",
+    tags: ["community", "outreach", "rural", "awareness"],
+    likes: 54,
+    views: 287
   }
+];
+
+// Filter categories for enhanced filtering
+const filterCategories = [
+  { value: 'All', label: 'All Events & Activities' },
+  { value: 'Events', label: 'All Events' },
+  { value: 'Activities', label: 'All Activities' },
+  { value: 'Independence Day', label: 'Independence Day' },
+  { value: 'Republic Day', label: 'Republic Day' },
+  { value: 'Workers Day', label: 'Workers Day' },
+  { value: 'Yoga Day', label: 'Yoga Day' },
+  { value: 'Cultural Programs', label: 'Cultural Programs' },
+  { value: 'Farmers Training', label: 'Farmers Training' },
+  { value: 'Skill Development', label: 'Skill Development' },
+  { value: 'Women Empowerment', label: 'Women Empowerment' },
+  { value: 'Community Outreach', label: 'Community Outreach' }
 ];
 
 type FilterType = 'All' | 'Training' | 'Events' | 'Activities';
@@ -210,13 +290,28 @@ export function Gallery() {
   const [sortType, setSortType] = useState<SortType>('newest');
   const [searchTerm, setSearchTerm] = useState("");
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
   const [modalImage, setModalImage] = useState<typeof galleryImages[0] | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isFocusMode, setIsFocusMode] = useState(true); // Start in focus mode
+  const [isFocusMode, setIsFocusMode] = useState(true); // Will be updated based on screen size
+  
+  // Set focus mode based on screen size
+  useEffect(() => {
+    const updateFocusMode = () => {
+      // Show info panel on desktop (md and above), hide on mobile
+      const isDesktop = window.innerWidth >= 768; // md breakpoint
+      setIsFocusMode(!isDesktop);
+    };
+    
+    updateFocusMode();
+    window.addEventListener('resize', updateFocusMode);
+    
+    return () => window.removeEventListener('resize', updateFocusMode);
+  }, []);
   
   // Advanced filtering and sorting
   const filteredAndSortedImages = galleryImages
@@ -347,17 +442,9 @@ export function Gallery() {
           <h2 className="font-heading font-bold text-xl sm:text-2xl lg:text-3xl text-gray-900 dark:text-white mb-4">
             Gallery
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto content-text mb-6">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto content-text text-center">
             Discover our journey through powerful moments of transformation, community engagement, and impactful initiatives across Maharashtra
           </p>
-          
-          {/* Gallery Statistics */}
-          <div className="flex justify-center items-center gap-8 text-sm text-gray-500 dark:text-gray-400">
-            <div className="flex items-center gap-2">
-              <Camera className="w-4 h-4" />
-              <span>{galleryImages.length} Photos</span>
-            </div>
-          </div>
         </motion.div>
 
         {/* Advanced Controls */}
@@ -482,7 +569,7 @@ export function Gallery() {
                   : 'grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4'
               }
             >
-              {filteredAndSortedImages.map((image, index) => (
+              {(showAll ? filteredAndSortedImages : filteredAndSortedImages.slice(0, 8)).map((image, index) => (
                 <motion.div
                   key={`${activeFilter}-${image.id}-${viewType}`}
                   layout
@@ -520,6 +607,13 @@ export function Gallery() {
                       ${hoveredImage === image.id ? 'opacity-100' : 'opacity-0'}
                       transition-all duration-300 z-10
                     `} />
+                  )}
+
+                  {/* Grid Caption Overlay */}
+                  {viewType === 'grid' && (
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2 sm:p-3 z-20">
+                      <h3 className="text-white font-medium text-xs sm:text-sm line-clamp-1">{image.alt}</h3>
+                    </div>
                   )}
                   
                   {/* Main Image */}
@@ -614,20 +708,44 @@ export function Gallery() {
           </motion.div>
         )}
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-center mt-12"
-        >
-          <Button size="lg" asChild>
-            <Link href="/gallery">
-              View Full Gallery
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </Button>
-        </motion.div>
+        {/* View Gallery Button */}
+        {!showAll && filteredAndSortedImages.length > 8 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="text-center mt-12"
+          >
+            <Button
+              size="lg"
+              onClick={() => setShowAll(true)}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              <Camera className="mr-2 w-5 h-5" />
+              View Full Gallery ({filteredAndSortedImages.length} Photos)
+            </Button>
+          </motion.div>
+        )}
+        
+        {/* Show Less Button */}
+        {showAll && filteredAndSortedImages.length > 8 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-center mt-12"
+          >
+            <Button
+              size="lg"
+              onClick={() => setShowAll(false)}
+              variant="outline"
+              className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300"
+            >
+              Show Less
+            </Button>
+          </motion.div>
+        )}
       </div>
 
       {/* Advanced Enhanced Modal */}
@@ -671,45 +789,53 @@ export function Gallery() {
                     >
                       {isFullscreen ? <Minimize className="w-5 h-5" /> : <Maximize className="w-5 h-5" />}
                     </Button>
-                    <Button
-                      onClick={closeModal}
-                      className="w-10 h-10 p-0 bg-white/20 hover:bg-white/30 text-white rounded-full backdrop-blur-sm"
-                    >
-                      <X className="w-5 h-5" />
-                    </Button>
                   </div>
                 </div>
               </div>
+              
+              {/* Close Button - Top Right Edge */}
+              <Button
+                onClick={closeModal}
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 p-0 bg-red-500 hover:bg-red-600 text-white rounded-full shadow-[0_0_20px_rgba(239,68,68,0.6)] border-2 border-white flex items-center justify-center z-[200]"
+              >
+                <X className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={3} />
+              </Button>
 
-              {/* Main Image Container */}
-              <div className="relative bg-gray-100 dark:bg-gray-800">
-                <Image
-                  src={modalImage.src}
-                  alt={modalImage.alt}
-                  width={1400}
-                  height={900}
-                  className={`w-full h-auto ${isFullscreen ? 'max-h-[calc(100vh-120px)]' : isFocusMode ? 'max-h-[85vh]' : 'max-h-[70vh]'} object-contain`}
-                  priority
-                />
-                
-                {/* Navigation Arrows */}
+              {/* Main Content with Navigation */}
+              <div className="relative flex items-center bg-gray-100 dark:bg-gray-800">
+                {/* Left Arrow - Outside Image */}
                 <Button
                   onClick={goToPrevious}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 p-0 bg-black/50 hover:bg-black/70 text-white rounded-full backdrop-blur-sm"
+                  className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 p-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-[0_0_20px_rgba(59,130,246,0.6)] border-2 border-white flex items-center justify-center z-[200] active:scale-95 transition-transform mx-1 sm:mx-2 md:mx-3"
                 >
-                  <ChevronLeft className="w-6 h-6" />
-                </Button>
-                <Button
-                  onClick={goToNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 p-0 bg-black/50 hover:bg-black/70 text-white rounded-full backdrop-blur-sm"
-                >
-                  <ChevronRight className="w-6 h-6" />
+                  <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" strokeWidth={3} />
                 </Button>
 
-                {/* Image Counter */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
-                  {(filteredAndSortedImages.findIndex(img => img.id === modalImage.id) + 1)} of {filteredAndSortedImages.length}
+                {/* Image Container with Padding */}
+                <div className="relative flex-1 px-1 sm:px-2 md:px-4">
+                  <Image
+                    src={modalImage.src}
+                    alt={modalImage.alt}
+                    width={1400}
+                    height={900}
+                    className={`w-full h-auto ${isFullscreen ? 'max-h-[calc(100vh-120px)]' : isFocusMode ? 'max-h-[85vh]' : 'max-h-[70vh]'} object-contain`}
+                    priority
+                  />
+                  
+
+                  {/* Image Counter */}
+                  <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-sm text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm">
+                    {(filteredAndSortedImages.findIndex(img => img.id === modalImage.id) + 1)} of {filteredAndSortedImages.length}
+                  </div>
                 </div>
+
+                {/* Right Arrow - Outside Image */}
+                <Button
+                  onClick={goToNext}
+                  className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 p-0 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-[0_0_20px_rgba(59,130,246,0.6)] border-2 border-white flex items-center justify-center z-[200] active:scale-95 transition-transform mx-1 sm:mx-2 md:mx-3"
+                >
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" strokeWidth={3} />
+                </Button>
               </div>
 
               {/* Enhanced Info Panel - Only show when not in focus mode */}

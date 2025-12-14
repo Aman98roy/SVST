@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import { XCircle, ArrowLeft, ArrowRight, ZoomIn } from "lucide-react";
 
 interface ImageModalProps {
   isOpen: boolean;
@@ -80,10 +80,10 @@ export function ImageModal({
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ delay: 0.1 }}
           onClick={onClose}
-          className="absolute top-4 right-4 z-30 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-xl rounded-full transition-all duration-300 shadow-2xl border border-white/20 group"
+          className="absolute top-4 right-4 z-[200] w-16 h-16 bg-red-500 hover:bg-red-600 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(239,68,68,0.6)] border-4 border-white flex items-center justify-center"
           aria-label="Close"
         >
-          <X className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+          <XCircle className="w-8 h-8 text-white" strokeWidth={3} />
         </motion.button>
 
         {/* Image Container */}
@@ -127,10 +127,10 @@ export function ImageModal({
                   e.stopPropagation();
                   handlePrevious();
                 }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-4 bg-white/10 hover:bg-white/20 backdrop-blur-xl rounded-full transition-all duration-300 shadow-2xl border border-white/20 group"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-[200] w-16 h-16 bg-blue-500 hover:bg-blue-600 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.6)] border-4 border-white flex items-center justify-center"
                 aria-label="Previous image"
               >
-                <ChevronLeft className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+                <ArrowLeft className="w-8 h-8 text-white" strokeWidth={3} />
               </motion.button>
 
               <motion.button
@@ -142,10 +142,10 @@ export function ImageModal({
                   e.stopPropagation();
                   handleNext();
                 }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-4 bg-white/10 hover:bg-white/20 backdrop-blur-xl rounded-full transition-all duration-300 shadow-2xl border border-white/20 group"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-[200] w-16 h-16 bg-blue-500 hover:bg-blue-600 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.6)] border-4 border-white flex items-center justify-center"
                 aria-label="Next image"
               >
-                <ChevronRight className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+                <ArrowRight className="w-8 h-8 text-white" strokeWidth={3} />
               </motion.button>
             </>
           )}

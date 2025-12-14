@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, X, Maximize2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, XCircle, Maximize2 } from "lucide-react";
 
 interface EventImageSliderProps {
   images: string[];
@@ -190,10 +190,10 @@ export function EventImageSlider({ images }: EventImageSliderProps) {
               {/* Close Button */}
               <button
                 onClick={closeExpanded}
-                className="absolute top-4 right-4 z-30 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-300"
+                className="absolute top-4 right-4 z-[200] w-16 h-16 bg-red-500 hover:bg-red-600 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(239,68,68,0.6)] border-4 border-white flex items-center justify-center"
                 aria-label="Close"
               >
-                <X className="w-6 h-6 text-white" />
+                <XCircle className="w-8 h-8 text-white" strokeWidth={3} />
               </button>
 
               {/* Expanded Image */}
@@ -224,24 +224,24 @@ export function EventImageSlider({ images }: EventImageSliderProps) {
                       e.stopPropagation();
                       setExpandedImageIndex((prev) => (prev - 1 + images.length) % images.length);
                     }}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-300"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 z-[200] w-16 h-16 bg-blue-500 hover:bg-blue-600 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.6)] border-4 border-white flex items-center justify-center"
                     aria-label="Previous image"
                   >
-                    <ChevronLeft className="w-6 h-6 text-white" />
+                    <ArrowLeft className="w-8 h-8 text-white" strokeWidth={3} />
                   </button>
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       setExpandedImageIndex((prev) => (prev + 1) % images.length);
                     }}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-300"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 z-[200] w-16 h-16 bg-blue-500 hover:bg-blue-600 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.6)] border-4 border-white flex items-center justify-center"
                     aria-label="Next image"
                   >
-                    <ChevronRight className="w-6 h-6 text-white" />
+                    <ArrowRight className="w-8 h-8 text-white" strokeWidth={3} />
                   </button>
 
                   {/* Image Counter */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white text-sm">
+                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[200] px-6 py-3 bg-gray-900 rounded-full text-white text-lg font-bold border-4 border-white shadow-[0_0_20px_rgba(0,0,0,0.8)]">
                     {expandedImageIndex + 1} / {images.length}
                   </div>
                 </>

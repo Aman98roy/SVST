@@ -222,3 +222,51 @@ img {
   overflow: hidden;
 }
 
+/* Force visibility of modal buttons on all devices */
+.modal-button-close {
+  background-color: #ef4444 !important;
+  color: white !important;
+  border: 4px solid white !important;
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6) !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.modal-button-nav {
+  background-color: #3b82f6 !important;
+  color: white !important;
+  border: 4px solid white !important;
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6) !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.modal-button-close:hover {
+  background-color: #dc2626 !important;
+}
+
+.modal-button-nav:hover {
+  background-color: #2563eb !important;
+}
+
+/* Ensure buttons are always visible on mobile */
+@media (max-width: 768px) {
+  .modal-button-close,
+  .modal-button-nav {
+    width: 56px !important;
+    height: 56px !important;
+    position: absolute !important;
+    z-index: 99999 !important;
+  }
+}
+
