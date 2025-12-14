@@ -317,14 +317,14 @@ export function Gallery() {
         case 'i':
         case 'I':
           e.preventDefault();
-          setIsFocusMode(!isFocusMode);
+          setIsFocusMode(prev => !prev);
           break;
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isModalOpen, isFullscreen, modalImage, goToNext, goToPrevious, isFocusMode]);
+  }, [isModalOpen, isFullscreen, modalImage, goToNext, goToPrevious]);
 
   const filters: FilterType[] = ['All', 'Training', 'Events', 'Activities'];
   const sortOptions: { value: SortType; label: string }[] = [
