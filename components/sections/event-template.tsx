@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { Info, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -293,12 +294,40 @@ export function EventTemplate({
               >
                 {/* Overview */}
                 <div>
-                  <h3 className="font-heading font-bold text-3xl text-gray-900 dark:text-white mb-6">
-                    Event Overview
+                  <h3 className="font-heading font-bold text-3xl text-gray-900 dark:text-white mb-8 flex items-center gap-4">
+                    <span className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 text-white shadow-xl transform hover:scale-110 transition-all duration-300">
+                      <Info className="w-6 h-6" />
+                    </span>
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Event Overview</span>
                   </h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {content.overview}
-                  </p>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="group"
+                  >
+                    <div className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-purple-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 border-2 border-blue-200 dark:border-gray-600 rounded-3xl shadow-2xl p-8 hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                        <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full animate-pulse"></div>
+                      </div>
+                      <div className="relative z-10">
+                        <p className="text-lg leading-8 text-gray-800 dark:text-gray-100 font-medium">
+                          {content.overview.length > 150 ? (
+                            content.overview.split('. ').map((sentence, index) => (
+                              <span key={index} className="block mb-3 last:mb-0">
+                                {sentence}{sentence.endsWith('.') ? '' : '.'}
+                              </span>
+                            ))
+                          ) : (
+                            content.overview
+                          )}
+                        </p>                        <div className="mt-6">
+                          <div className="h-px bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                        </div>                      </div>
+                    </div>
+                  </motion.div>
                 </div>
 
                 {/* Objectives */}
@@ -351,12 +380,40 @@ export function EventTemplate({
 
                 {/* Impact */}
                 <div>
-                  <h3 className="font-heading font-bold text-3xl text-gray-900 dark:text-white mb-6">
-                    Event Impact
+                  <h3 className="font-heading font-bold text-3xl text-gray-900 dark:text-white mb-8 flex items-center gap-4">
+                    <span className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 via-green-500 to-teal-600 text-white shadow-xl transform hover:scale-110 transition-all duration-300">
+                      <TrendingUp className="w-6 h-6" />
+                    </span>
+                    <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Event Impact</span>
                   </h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {content.impact}
-                  </p>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="group"
+                  >
+                    <div className="relative overflow-hidden bg-gradient-to-br from-white via-emerald-50 to-green-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 border-2 border-emerald-200 dark:border-gray-600 rounded-3xl shadow-2xl p-8 hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/10 to-green-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                        <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full animate-pulse"></div>
+                      </div>
+                      <div className="relative z-10">
+                        <p className="text-lg leading-8 text-gray-800 dark:text-gray-100 font-medium">
+                          {content.impact.length > 150 ? (
+                            content.impact.split('. ').map((sentence, index) => (
+                              <span key={index} className="block mb-3 last:mb-0">
+                                {sentence}{sentence.endsWith('.') ? '' : '.'}
+                              </span>
+                            ))
+                          ) : (
+                            content.impact
+                          )}
+                        </p>                        <div className="mt-6">
+                          <div className="h-px bg-gradient-to-r from-emerald-400 to-green-500"></div>
+                        </div>                      </div>
+                    </div>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
@@ -556,63 +613,80 @@ export function EventTemplate({
 
       {/* Expanded Gallery Modal */}
       {selectedImage !== null && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4" onClick={closeGallery}>
-          <div className="relative max-w-6xl max-h-full" onClick={(e) => e.stopPropagation()}>
-            <Image
-              src={gallery[selectedImage].src}
-              alt={gallery[selectedImage].alt}
-              width={1200}
-              height={800}
-              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-            />
-            
-            {/* Close Button */}
+        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center overflow-y-auto p-2 sm:p-4" onClick={closeGallery}>
+          <div className="relative flex flex-col items-center gap-3 sm:gap-4 w-full max-w-7xl my-auto" onClick={(e) => e.stopPropagation()}>
+            {/* Close Button - Above Image on Mobile, Top Right on Desktop */}
             <Button
               variant="outline"
-              onClick={closeGallery}
-              className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/20 hover:bg-white/30 border-2 border-white/50 text-white backdrop-blur-xl rounded-full transition-all duration-300 hover:scale-110 z-50 shadow-2xl ring-2 ring-white/20 hover:ring-white/40"
+              onClick={(e) => {
+                e.stopPropagation();
+                closeGallery();
+              }}
+              className="absolute -top-1 right-0 sm:top-0 sm:right-0 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white hover:bg-gray-100 border-2 border-white backdrop-blur-xl rounded-full transition-all duration-300 hover:scale-110 z-[9999] shadow-2xl p-0"
               style={{ backdropFilter: 'blur(20px)' }}
             >
-              <X className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 stroke-[3] drop-shadow-lg" />
+              <X className="w-11 h-11 sm:w-13 sm:h-13 lg:w-16 lg:h-16 text-black stroke-[2.5]" />
             </Button>
 
-            {/* Navigation */}
-            {gallery.length > 1 && (
-              <>
-                <Button
-                  variant="outline"
-                  onClick={prevImage}
-                  className="absolute left-3 sm:left-4 lg:left-6 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/20 hover:bg-white/30 border-2 border-white/50 text-white backdrop-blur-xl rounded-full transition-all duration-300 hover:scale-110 z-50 shadow-2xl ring-2 ring-white/20 hover:ring-white/40"
-                  style={{ backdropFilter: 'blur(20px)' }}
-                >
-                  <ChevronLeft className="w-5 h-5 sm:w-7 sm:h-7 lg:w-9 lg:h-9 stroke-[3] drop-shadow-lg" />
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={nextImage}
-                  className="absolute right-3 sm:right-4 lg:right-6 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/20 hover:bg-white/30 border-2 border-white/50 text-white backdrop-blur-xl rounded-full transition-all duration-300 hover:scale-110 z-50 shadow-2xl ring-2 ring-white/20 hover:ring-white/40"
-                  style={{ backdropFilter: 'blur(20px)' }}
-                >
-                  <ChevronRight className="w-5 h-5 sm:w-7 sm:h-7 lg:w-9 lg:h-9 stroke-[3] drop-shadow-lg" />
-                </Button>
-              </>
-            )}
+            {/* Counter - Top Left */}
+            <div className="self-start bg-white/90 backdrop-blur-xl rounded-full px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 border-2 border-white shadow-2xl">
+              <span className="text-gray-900 text-xs sm:text-sm md:text-base lg:text-lg font-bold">
+                {selectedImage + 1} / {gallery.length}
+              </span>
+            </div>
 
-            {/* Caption */}
+            {/* Image Container with Navigation */}
+            <div className="relative w-full flex items-center justify-center gap-2 sm:gap-4 md:gap-6">
+              {/* Left Navigation - Inline with Image */}
+              {gallery.length > 1 && (
+                <Button
+                  variant="outline"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prevImage();
+                  }}
+                  className="absolute left-1 sm:left-2 md:relative md:left-auto top-1/2 -translate-y-1/2 md:translate-y-0 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white hover:bg-gray-100 border-2 border-white backdrop-blur-xl rounded-full transition-all duration-300 hover:scale-110 z-[100] shadow-2xl flex-shrink-0 p-0"
+                  style={{ backdropFilter: 'blur(20px)' }}
+                >
+                  <ChevronLeft className="w-11 h-11 sm:w-13 sm:h-13 lg:w-16 lg:h-16 text-black stroke-[2.5]" />
+                </Button>
+              )}
+
+              {/* Image */}
+              <div className="relative flex-1 max-w-6xl px-16 sm:px-20 md:px-0">
+                <Image
+                  src={gallery[selectedImage].src}
+                  alt={gallery[selectedImage].alt}
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto max-h-[55vh] sm:max-h-[60vh] md:max-h-[70vh] object-contain rounded-lg shadow-2xl"
+                />
+              </div>
+
+              {/* Right Navigation - Inline with Image */}
+              {gallery.length > 1 && (
+                <Button
+                  variant="outline"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    nextImage();
+                  }}
+                  className="absolute right-1 sm:right-2 md:relative md:right-auto top-1/2 -translate-y-1/2 md:translate-y-0 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white hover:bg-gray-100 border-2 border-white backdrop-blur-xl rounded-full transition-all duration-300 hover:scale-110 z-[100] shadow-2xl flex-shrink-0 p-0"
+                  style={{ backdropFilter: 'blur(20px)' }}
+                >
+                  <ChevronRight className="w-11 h-11 sm:w-13 sm:h-13 lg:w-16 lg:h-16 text-black stroke-[2.5]" />
+                </Button>
+              )}
+            </div>
+
+            {/* Caption - Below Image */}
             {gallery[selectedImage].caption && (
-              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-black/70 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border-2 border-white/20 shadow-2xl">
-                <p className="text-white text-center text-sm sm:text-base leading-relaxed font-medium drop-shadow-lg">
+              <div className="max-w-6xl w-full bg-white/90 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border-2 border-white shadow-2xl">
+                <p className="text-gray-900 text-center text-sm sm:text-base lg:text-lg leading-relaxed font-medium">
                   {gallery[selectedImage].caption}
                 </p>
               </div>
             )}
-
-            {/* Counter */}
-            <div className="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6 bg-white/20 backdrop-blur-xl rounded-full px-3 py-1 sm:px-4 sm:py-2 border-2 border-white/30 shadow-2xl ring-2 ring-white/10">
-              <span className="text-white text-xs sm:text-sm lg:text-base font-bold drop-shadow-lg">
-                {selectedImage + 1} / {gallery.length}
-              </span>
-            </div>
           </div>
         </div>
       )}
