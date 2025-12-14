@@ -189,7 +189,7 @@ const galleryImages = [
   // Activities - Farmers Training
   { 
     id: 12, 
-    src: "/images/activities/farmers-training.jpg", 
+    src: "/images/activities/farmers-training/FARMERS TRAINING.jpeg", 
     alt: "Agricultural Training Program", 
     category: "Activities", 
     subcategory: "Farmers Training",
@@ -203,7 +203,7 @@ const galleryImages = [
   },
   { 
     id: 13, 
-    src: "/images/activities/organic-farming.jpg", 
+    src: "/images/activities/farmers-training/FARMERS TRAINING 2.jpeg", 
     alt: "Organic Farming Workshop", 
     category: "Activities", 
     subcategory: "Farmers Training",
@@ -215,50 +215,264 @@ const galleryImages = [
     likes: 72,
     views: 398
   },
-  // Activities - Skill Development
   { 
     id: 14, 
-    src: "/images/activities/skill-development.jpg", 
-    alt: "Vocational Skills Training", 
+    src: "/images/activities/farmers-training/FARMERS TRAINING 3.jpeg", 
+    alt: "Agricultural Technology Workshop", 
     category: "Activities", 
-    subcategory: "Skill Development",
-    description: "Comprehensive skill development programs for employment generation", 
-    location: "Skills Development Center",
+    subcategory: "Farmers Training",
+    description: "Modern agricultural technology training for improved farming practices", 
+    location: "Training Center",
     date: "2024",
-    photographer: "Professional Training Team",
-    tags: ["skills", "development", "professional", "career"],
-    likes: 76,
-    views: 445
+    photographer: "Agricultural Extension Team",
+    tags: ["technology", "farming", "modern", "agriculture"],
+    likes: 58,
+    views: 372
   },
-  // Activities - Women Empowerment
   { 
     id: 15, 
-    src: "/images/activities/women-empowerment.jpg", 
-    alt: "Women's Skill Development", 
+    src: "/images/activities/farmers-training/FARMERS TRAINING 5.jpeg", 
+    alt: "Field Training Session", 
     category: "Activities", 
-    subcategory: "Women Empowerment",
-    description: "Empowering women through skill development and entrepreneurship training", 
-    location: "Women's Training Center",
-    date: "2024",
-    photographer: "Women's Development Team",
-    tags: ["women", "empowerment", "skills", "entrepreneurship"],
-    likes: 87,
-    views: 432
-  },
-  // Activities - Community Outreach
-  { 
-    id: 16, 
-    src: "/images/activities/community-outreach.jpg", 
-    alt: "Community Service Program", 
-    category: "Activities", 
-    subcategory: "Community Outreach",
-    description: "Community outreach programs for social development and awareness", 
-    location: "Rural Communities",
+    subcategory: "Farmers Training",
+    description: "Practical field training sessions for farmers", 
+    location: "Demonstration Farm",
     date: "2024",
     photographer: "Field Team",
-    tags: ["community", "outreach", "rural", "awareness"],
-    likes: 54,
-    views: 287
+    tags: ["field", "practical", "training", "demonstration"],
+    likes: 63,
+    views: 289
+  },
+  // Activities - Biological Input
+  { 
+    id: 16, 
+    src: "/images/activities/biological-input/Bio Input 01.JPG", 
+    alt: "Biological Input Distribution", 
+    category: "Activities", 
+    subcategory: "Biological Input",
+    description: "Distribution of biological inputs to promote organic farming", 
+    location: "Distribution Center",
+    date: "2024",
+    photographer: "Bio Input Team",
+    tags: ["biological", "organic", "input", "farming"],
+    likes: 45,
+    views: 234
+  },
+  { 
+    id: 17, 
+    src: "/images/activities/biological-input/Bio Input 03.JPG", 
+    alt: "Bio Input Training Workshop", 
+    category: "Activities", 
+    subcategory: "Biological Input",
+    description: "Training farmers on the use of biological inputs for sustainable farming", 
+    location: "Training Center",
+    date: "2024",
+    photographer: "Bio Input Team",
+    tags: ["biological", "training", "sustainable", "organic"],
+    likes: 52,
+    views: 267
+  },
+  { 
+    id: 18, 
+    src: "/images/activities/biological-input/Bio Input 04.JPG", 
+    alt: "Organic Fertilizer Production", 
+    category: "Activities", 
+    subcategory: "Biological Input",
+    description: "Production and quality testing of organic fertilizers and bio inputs", 
+    location: "Production Unit",
+    date: "2024",
+    photographer: "Quality Team",
+    tags: ["organic", "fertilizer", "production", "quality"],
+    likes: 41,
+    views: 198
+  },
+  // Activities - COVID-19 Relief
+  { 
+    id: 19, 
+    src: "/images/activities/covid-19/WhatsApp-Image-2023-04-13-at-9.57.26-AM.jpeg", 
+    alt: "COVID-19 Relief Distribution", 
+    category: "Activities", 
+    subcategory: "COVID-19 Relief",
+    description: "Distribution of essential supplies during COVID-19 pandemic", 
+    location: "Community Centers",
+    date: "2023",
+    photographer: "Relief Team",
+    tags: ["covid19", "relief", "community", "support"],
+    likes: 78,
+    views: 445
+  },
+  // Activities - DAESI CCIM
+  { 
+    id: 20, 
+    src: "/images/activities/daesi-ccim/01.jpg", 
+    alt: "DAESI CCIM Training Program", 
+    category: "Activities", 
+    subcategory: "DAESI CCIM",
+    description: "DAESI CCIM skill development and training program", 
+    location: "Training Center",
+    date: "2024",
+    photographer: "Training Team",
+    tags: ["daesi", "ccim", "skill", "development"],
+    likes: 34,
+    views: 178
+  },
+  { 
+    id: 21, 
+    src: "/images/activities/daesi-ccim/02.JPG", 
+    alt: "DAESI CCIM Workshop", 
+    category: "Activities", 
+    subcategory: "DAESI CCIM",
+    description: "Comprehensive workshop under DAESI CCIM program", 
+    location: "Workshop Center",
+    date: "2024",
+    photographer: "Documentation Team",
+    tags: ["daesi", "ccim", "workshop", "training"],
+    likes: 29,
+    views: 156
+  },
+  { 
+    id: 22, 
+    src: "/images/activities/daesi-ccim/03.JPG", 
+    alt: "DAESI CCIM Certification", 
+    category: "Activities", 
+    subcategory: "DAESI CCIM",
+    description: "Certification ceremony for DAESI CCIM program participants", 
+    location: "Training Center",
+    date: "2024",
+    photographer: "Event Team",
+    tags: ["certification", "daesi", "ccim", "achievement"],
+    likes: 38,
+    views: 201
+  },
+  // Activities - Vasundhara Program
+  { 
+    id: 23, 
+    src: "/images/activities/vasundhara/01.JPG", 
+    alt: "Vasundhara Environmental Initiative", 
+    category: "Activities", 
+    subcategory: "Vasundhara",
+    description: "Environmental conservation activities under Vasundhara program", 
+    location: "Environmental Sites",
+    date: "2024",
+    photographer: "Environmental Team",
+    tags: ["environment", "conservation", "vasundhara", "green"],
+    likes: 56,
+    views: 334
+  },
+  { 
+    id: 24, 
+    src: "/images/activities/vasundhara/02.JPG", 
+    alt: "Tree Plantation Drive", 
+    category: "Activities", 
+    subcategory: "Vasundhara",
+    description: "Community tree plantation drive for environmental conservation", 
+    location: "Community Areas",
+    date: "2024",
+    photographer: "Green Team",
+    tags: ["plantation", "trees", "environment", "community"],
+    likes: 67,
+    views: 398
+  },
+  { 
+    id: 25, 
+    src: "/images/activities/vasundhara/03.JPG", 
+    alt: "Environmental Awareness Program", 
+    category: "Activities", 
+    subcategory: "Vasundhara",
+    description: "Creating awareness about environmental conservation and sustainability", 
+    location: "Schools & Communities",
+    date: "2024",
+    photographer: "Awareness Team",
+    tags: ["awareness", "environment", "sustainability", "education"],
+    likes: 49,
+    views: 276
+  },
+  { 
+    id: 26, 
+    src: "/images/activities/vasundhara/04.jpg", 
+    alt: "Water Conservation Project", 
+    category: "Activities", 
+    subcategory: "Vasundhara",
+    description: "Water conservation and rainwater harvesting initiatives", 
+    location: "Rural Areas",
+    date: "2024",
+    photographer: "Water Team",
+    tags: ["water", "conservation", "rainwater", "harvesting"],
+    likes: 43,
+    views: 245
+  },
+  // Additional Farmers Training Images
+  { 
+    id: 27, 
+    src: "/images/activities/farmers-training/FARMERS TRAINING 6.jpeg", 
+    alt: "Advanced Farming Techniques", 
+    category: "Activities", 
+    subcategory: "Farmers Training",
+    description: "Training on advanced farming techniques and best practices", 
+    location: "Training Center",
+    date: "2024",
+    photographer: "Training Team",
+    tags: ["advanced", "techniques", "farming", "best-practices"],
+    likes: 51,
+    views: 298
+  },
+  { 
+    id: 28, 
+    src: "/images/activities/farmers-training/IMG-20170316-WA0001.jpg", 
+    alt: "Practical Farm Training", 
+    category: "Activities", 
+    subcategory: "Farmers Training",
+    description: "Hands-on practical training in farm management and operations", 
+    location: "Demonstration Farm",
+    date: "2017",
+    photographer: "Field Team",
+    tags: ["practical", "hands-on", "farm", "management"],
+    likes: 44,
+    views: 267
+  },
+  // Additional Vasundhara Images
+  { 
+    id: 29, 
+    src: "/images/activities/vasundhara/05.JPG", 
+    alt: "Soil Conservation Program", 
+    category: "Activities", 
+    subcategory: "Vasundhara",
+    description: "Soil conservation and land restoration activities", 
+    location: "Agricultural Fields",
+    date: "2024",
+    photographer: "Conservation Team",
+    tags: ["soil", "conservation", "restoration", "agriculture"],
+    likes: 38,
+    views: 221
+  },
+  { 
+    id: 30, 
+    src: "/images/activities/vasundhara/06.JPG", 
+    alt: "Community Garden Project", 
+    category: "Activities", 
+    subcategory: "Vasundhara",
+    description: "Establishing community gardens for sustainable local food production", 
+    location: "Community Centers",
+    date: "2024",
+    photographer: "Garden Team",
+    tags: ["community", "garden", "sustainable", "food"],
+    likes: 42,
+    views: 256
+  },
+  // Additional DAESI CCIM Images
+  { 
+    id: 31, 
+    src: "/images/activities/daesi-ccim/WhatsApp Image 2025-09-17 at 11.44.54 AM.jpeg", 
+    alt: "DAESI CCIM Skills Workshop", 
+    category: "Activities", 
+    subcategory: "DAESI CCIM",
+    description: "Comprehensive skills development workshop under DAESI CCIM initiative", 
+    location: "Skills Center",
+    date: "2025",
+    photographer: "Skills Team",
+    tags: ["skills", "workshop", "development", "daesi"],
+    likes: 33,
+    views: 189
   }
 ];
 
@@ -273,12 +487,13 @@ const filterCategories = [
   { value: 'Yoga Day', label: 'Yoga Day' },
   { value: 'Cultural Programs', label: 'Cultural Programs' },
   { value: 'Farmers Training', label: 'Farmers Training' },
-  { value: 'Skill Development', label: 'Skill Development' },
-  { value: 'Women Empowerment', label: 'Women Empowerment' },
-  { value: 'Community Outreach', label: 'Community Outreach' }
+  { value: 'Vasundhara', label: 'Vasundhara' },
+  { value: 'Biological Input', label: 'Biological Input' },
+  { value: 'COVID-19 Relief', label: 'COVID-19 Relief' },
+  { value: 'DAESI CCIM', label: 'DAESI CCIM' }
 ];
 
-type FilterType = 'All' | 'Training' | 'Events' | 'Activities';
+type FilterType = 'All' | 'Events' | 'Activities' | 'Independence Day' | 'Republic Day' | 'Workers Day' | 'Yoga Day' | 'Cultural Programs' | 'Farmers Training' | 'Vasundhara' | 'Biological Input' | 'COVID-19 Relief' | 'DAESI CCIM';
 type ViewType = 'grid' | 'list';
 type SortType = 'newest' | 'oldest' | 'popular' | 'alphabetical';
 
@@ -286,6 +501,8 @@ export function Gallery() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(0);
   const [activeFilter, setActiveFilter] = useState<FilterType>('All');
+  const [secondaryFilter, setSecondaryFilter] = useState<FilterType>('All');
+  const [showSecondaryFilters, setShowSecondaryFilters] = useState(false);
   const [viewType, setViewType] = useState<ViewType>('grid');
   const [sortType, setSortType] = useState<SortType>('newest');
   const [searchTerm, setSearchTerm] = useState("");
@@ -316,7 +533,24 @@ export function Gallery() {
   // Advanced filtering and sorting
   const filteredAndSortedImages = galleryImages
     .filter(img => {
-      const matchesFilter = activeFilter === 'All' || img.category === activeFilter;
+      // Primary filter logic
+      let matchesFilter = false;
+      
+      if (activeFilter === 'All') {
+        matchesFilter = true;
+      } else if (activeFilter === 'Events' || activeFilter === 'Activities') {
+        if (showSecondaryFilters && secondaryFilter !== 'All') {
+          // If secondary filter is active, match against subcategory
+          matchesFilter = img.subcategory === secondaryFilter;
+        } else {
+          // If no secondary filter, match against main category
+          matchesFilter = img.category === activeFilter;
+        }
+      } else {
+        // Direct match against subcategory
+        matchesFilter = img.subcategory === activeFilter;
+      }
+      
       const matchesSearch = searchTerm === "" || 
         img.alt.toLowerCase().includes(searchTerm.toLowerCase()) ||
         img.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -420,8 +654,25 @@ export function Gallery() {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isModalOpen, isFullscreen, modalImage, goToNext, goToPrevious]);
+  const handleFilterChange = (filter: FilterType) => {
+    setActiveFilter(filter);
+    
+    if (filter === 'Events' || filter === 'Activities') {
+      setShowSecondaryFilters(true);
+      setSecondaryFilter('All'); // Reset secondary filter
+    } else {
+      setShowSecondaryFilters(false);
+      setSecondaryFilter('All');
+    }
+  };
 
-  const filters: FilterType[] = ['All', 'Training', 'Events', 'Activities'];
+  const handleSecondaryFilterChange = (filter: FilterType) => {
+    setSecondaryFilter(filter);
+  };
+  const primaryFilters: FilterType[] = ['All', 'Events', 'Activities'];
+  const eventFilters: FilterType[] = ['Independence Day', 'Republic Day', 'Workers Day', 'Yoga Day', 'Cultural Programs'];
+  const activityFilters: FilterType[] = ['Farmers Training', 'Vasundhara', 'Biological Input', 'COVID-19 Relief', 'DAESI CCIM'];
+  
   const sortOptions: { value: SortType; label: string }[] = [
     { value: 'newest', label: 'Newest First' },
     { value: 'oldest', label: 'Oldest First' },
@@ -485,22 +736,62 @@ export function Gallery() {
           {/* Filters and View Controls */}
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             {/* Category Filters */}
-            <div className="flex flex-wrap gap-2 justify-center">
-              {filters.map((filter) => (
-                <Button
-                  key={filter}
-                  variant={activeFilter === filter ? "primary" : "outline"}
-                  size="sm"
-                  onClick={() => setActiveFilter(filter)}
-                  className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm px-2 sm:px-3"
+            <div className="flex flex-col gap-4">
+              {/* Primary Filters */}
+              <div className="flex flex-wrap gap-2 justify-center">
+                {primaryFilters.map((filter) => (
+                  <Button
+                    key={filter}
+                    variant={activeFilter === filter ? "primary" : "outline"}
+                    size="sm"
+                    onClick={() => handleFilterChange(filter)}
+                    className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm px-2 sm:px-3"
+                  >
+                    <Filter className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                    {filter}
+                    <span className="ml-1 sm:ml-2 bg-gray-200 dark:bg-gray-700 text-xs px-1.5 py-0.5 rounded-full">
+                      {filter === 'All' ? galleryImages.length : galleryImages.filter(img => img.category === filter).length}
+                    </span>
+                  </Button>
+                ))}
+              </div>
+              
+              {/* Secondary Filters */}
+              {showSecondaryFilters && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex flex-wrap gap-2 justify-center"
                 >
-                  <Filter className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  {filter}
-                  <span className="ml-1 sm:ml-2 bg-gray-200 dark:bg-gray-700 text-xs px-1.5 py-0.5 rounded-full">
-                    {filter === 'All' ? galleryImages.length : galleryImages.filter(img => img.category === filter).length}
-                  </span>
-                </Button>
-              ))}
+                  <Button
+                    variant={secondaryFilter === 'All' ? "primary" : "outline"}
+                    size="sm"
+                    onClick={() => handleSecondaryFilterChange('All')}
+                    className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm px-2 sm:px-3"
+                  >
+                    All {activeFilter}
+                    <span className="ml-1 sm:ml-2 bg-gray-200 dark:bg-gray-700 text-xs px-1.5 py-0.5 rounded-full">
+                      {galleryImages.filter(img => img.category === activeFilter).length}
+                    </span>
+                  </Button>
+                  {(activeFilter === 'Events' ? eventFilters : activityFilters).map((filter) => (
+                    <Button
+                      key={filter}
+                      variant={secondaryFilter === filter ? "primary" : "outline"}
+                      size="sm"
+                      onClick={() => handleSecondaryFilterChange(filter)}
+                      className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm px-2 sm:px-3"
+                    >
+                      {filter}
+                      <span className="ml-1 sm:ml-2 bg-gray-200 dark:bg-gray-700 text-xs px-1.5 py-0.5 rounded-full">
+                        {galleryImages.filter(img => img.subcategory === filter).length}
+                      </span>
+                    </Button>
+                  ))}
+                </motion.div>
+              )}
             </div>
 
             {/* View Toggle */}

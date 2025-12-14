@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, XCircle, Maximize2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, XCircle, Maximize2, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface EventImageSliderProps {
   images: string[];

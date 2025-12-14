@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { EventTemplate } from '@/components/sections/event-template'
-import ImageModal from '@/components/ui/image-modal'
+import { ImageModal } from '@/components/ui/image-modal'
 
 export default function CulturalProgramClient() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -112,15 +112,17 @@ export default function CulturalProgramClient() {
           impact: "The Cultural Program was a remarkable success, entertaining and educating participants about preserving cultural heritage and working towards social harmony. The Trust continues to believe in the power of culture as a tool for community development and youth empowerment."
         }}
       />
-      {selectedImage && (
-        <ImageModal
-          src={selectedImage}
-          alt={`Cultural Program ${selectedIndex + 1}`}
-          onClose={closeModal}
-          onNext={() => navigateImage('next')}
-          onPrevious={() => navigateImage('prev')}
-        />
-      )}
+      <ImageModal
+        isOpen={selectedImage !== null}
+        onClose={closeModal}
+        images={images}
+        currentIndex={selectedIndex}
+        onNavigate={(index) => {
+          setSelectedIndex(index)
+          setSelectedImage(images[index])
+        }}
+        showNavigation={true}
+      />
     </>
   )
 }
